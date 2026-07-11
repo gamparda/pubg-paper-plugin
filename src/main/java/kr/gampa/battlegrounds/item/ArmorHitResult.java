@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.item; public record ArmorHitResult(double healthDamage,double durabilityDamage,boolean destroyed){}

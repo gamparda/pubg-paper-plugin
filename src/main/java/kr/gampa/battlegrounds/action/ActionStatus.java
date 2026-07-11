@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.action; public enum ActionStatus { RUNNING, COMPLETED, CANCELLED }

@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.item; public enum ArmorKind { HELMET, VEST }

@@ -1,5 +1,6 @@
 schema-version: 1
 combat:
+  health-scale: 5.0
   friendly-fire: false
   head-threshold: 0.72
   empty-click-sound: BLOCK_LEVER_CLICK
@@ -65,22 +66,85 @@ healing:
   bandage:
     name: "&f붕대"
     material: PAPER
-    heal: 10.0
+    heal: 12.0
     cap: 75.0
+    use-seconds: 3
+    weight: 2
   first-aid:
     name: "&c구급상자"
     material: RED_DYE
-    heal: 75.0
+    heal-to: 75.0
     cap: 75.0
+    use-seconds: 6
+    apply-seconds: 2
+    weight: 10
   med-kit:
     name: "&d의료용 키트"
     material: MAGENTA_DYE
-    heal: 100.0
+    heal-to: 100.0
     cap: 100.0
+    use-seconds: 6
+    weight: 15
 armor:
-  helmet-1: {name: "&f1레벨 헬멧", material: LEATHER_HELMET, slot: HEAD, reduction: 0.20, durability: 80.0}
-  helmet-2: {name: "&a2레벨 헬멧", material: IRON_HELMET, slot: HEAD, reduction: 0.40, durability: 150.0}
-  helmet-3: {name: "&b3레벨 헬멧", material: DIAMOND_HELMET, slot: HEAD, reduction: 0.55, durability: 230.0}
-  vest-1: {name: "&f1레벨 조끼", material: LEATHER_CHESTPLATE, slot: CHEST, reduction: 0.20, durability: 100.0}
-  vest-2: {name: "&a2레벨 조끼", material: IRON_CHESTPLATE, slot: CHEST, reduction: 0.40, durability: 180.0}
-  vest-3: {name: "&b3레벨 조끼", material: DIAMOND_CHESTPLATE, slot: CHEST, reduction: 0.55, durability: 260.0}
+  helmet-1: {name: "&f1레벨 헬멧", material: LEATHER_HELMET, slot: HEAD, reduction: 0.30, durability: 100.0, weight: 0}
+  helmet-2: {name: "&a2레벨 헬멧", material: IRON_HELMET, slot: HEAD, reduction: 0.40, durability: 100.0, weight: 0}
+  helmet-3: {name: "&b3레벨 헬멧", material: DIAMOND_HELMET, slot: HEAD, reduction: 0.55, durability: 100.0, weight: 0, supply-only: true}
+  vest-1: {name: "&f1레벨 조끼", material: LEATHER_CHESTPLATE, slot: CHEST, reduction: 0.30, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
+  vest-2: {name: "&a2레벨 조끼", material: IRON_CHESTPLATE, slot: CHEST, reduction: 0.40, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
+  vest-3: {name: "&b3레벨 조끼", material: DIAMOND_CHESTPLATE, slot: CHEST, reduction: 0.55, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
+
+
+boosters:
+  energy-drink:
+    name: "&b에너지 드링크"
+    material: HONEY_BOTTLE
+    boost: 40
+    use-seconds: 4
+    weight: 4
+  painkiller:
+    name: "&f진통제"
+    material: SUGAR
+    boost: 60
+    use-seconds: 6
+    weight: 6
+  adrenaline:
+    name: "&d아드레날린 주사기"
+    material: BREEZE_ROD
+    boost: 100
+    use-seconds: 6
+    weight: 10
+backpacks:
+  backpack-1: {name: "&f1레벨 배낭", material: BUNDLE, capacity: 150, weight: 0}
+  backpack-2: {name: "&a2레벨 배낭", material: GREEN_BUNDLE, capacity: 200, weight: 0}
+  backpack-3: {name: "&b3레벨 배낭", material: BLUE_BUNDLE, capacity: 250, weight: 0}
+  jammer-backpack: {name: "&95전파 방해 배낭", material: BLACK_BUNDLE, capacity: 200, energy: 100, weight: 0}
+special:
+  frying-pan: {name: "&8프라이팬", material: IRON_SHOVEL, bullet-block: true, weight: 4}
+  tactical-pack: {name: "&6전술 가방", material: ORANGE_BUNDLE, storage-slots: 4, weight: 20}
+  emt-gear: {name: "&c응급 처치 장비", material: WHITE_BUNDLE, revive-seconds: 8, healing-speed-multiplier: 0.75, weight: 20}
+  all-in-one-repair-kit: {name: "&e올인원 수리 키트", material: ANVIL, use-seconds: 3, repair-armor: true, weight: 20}
+  parachute: {name: "&f낙하산", material: FEATHER, reusable: true, minimum-fall-blocks: 6, slow-falling-seconds: 12, weight: 0}
+  ghillie-green: {name: "&2길리 슈트", material: MOSS_BLOCK, camouflage: green, weight: 10}
+  ghillie-snow: {name: "&f설원 길리 슈트", material: SNOW_BLOCK, camouflage: snow, weight: 10}
+  ghillie-desert: {name: "&6사막 길리 슈트", material: SAND, camouflage: desert, weight: 10}
+  hemostatic-device: {name: "&c응급 지혈 주사", material: REDSTONE_TORCH, revive-seconds: 1, weight: 5}
+  self-aed: {name: "&e자가제세동기", material: RECOVERY_COMPASS, revive-seconds: 10, revive-health: 10, consume-on-start: true, weight: 15}
+  combat-ready-kit: {name: "&d전투 준비 키트", material: ENCHANTED_GOLDEN_APPLE, use-seconds: 7, heal-to: 100, boost: 100, weight: 20}
+  jerry-can: {name: "&c연료통", material: LAVA_BUCKET, use-seconds: 3, fuel-min: 35, fuel-max: 90, durability: 200, weight: 20}
+  emergency-pickup: {name: "&b비상 호출", material: LEAD, deploy-seconds: 60, capacity: 4, weight: 50}
+  folding-shield: {name: "&7접이식 방패", material: HEAVY_WEIGHTED_PRESSURE_PLATE, deploy-seconds: 1.5, durability: 1800, weight: 30}
+  bluechip: {name: "&b블루칩", material: ECHO_SHARD, weight: 5}
+  bluechip-transmitter: {name: "&3블루칩 송신기", material: END_CRYSTAL, base-seconds: 10, per-extra-seconds: 5, weight: 20}
+  bluezone-uplink: {name: "&9블루존 유도기", material: HEART_OF_THE_SEA, use-seconds: 15, sandbox-only: true, weight: 30}
+capacity:
+  base: 50
+  enforce-on-pickup: true
+downed:
+  bleedout-seconds: 60
+  revive-seconds: 10
+  revive-health: 10
+  crawl-speed: 0.05
+consumables:
+  movement-radius: 2.0
+  cancel-on-damage: true
+  cancel-on-item-switch: true

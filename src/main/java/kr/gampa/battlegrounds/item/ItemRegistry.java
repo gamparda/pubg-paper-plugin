@@ -14,7 +14,7 @@ public final class ItemRegistry {
   public ItemRegistry(BattlegroundsPlugin plugin) { this.plugin = plugin; reload(); }
   public void reload() {
     definitions.clear();
-    for (String category : List.of("weapons", "ammo", "healing", "armor")) {
+    for (String category : List.of("weapons", "ammo", "healing", "boosters", "armor", "backpacks", "special")) {
       ConfigurationSection root = plugin.getConfig().getConfigurationSection(category);
       if (root != null) for (String id : root.getKeys(false)) definitions.put(id, root.getConfigurationSection(id));
     }
@@ -25,7 +25,10 @@ public final class ItemRegistry {
     if (plugin.getConfig().contains("weapons."+id)) return "weapon";
     if (plugin.getConfig().contains("ammo."+id)) return "ammo";
     if (plugin.getConfig().contains("healing."+id)) return "healing";
+    if (plugin.getConfig().contains("boosters."+id)) return "booster";
     if (plugin.getConfig().contains("armor."+id)) return "armor";
+    if (plugin.getConfig().contains("backpacks."+id)) return "backpack";
+    if (plugin.getConfig().contains("special."+id)) return "special";
     return null;
   }
   public ItemStack create(String id) {
@@ -38,6 +41,7 @@ public final class ItemRegistry {
     String category=category(id); meta.getPersistentDataContainer().set(plugin.itemTypeKey(), PersistentDataType.STRING, category);
     if (category.equals("weapon")) meta.getPersistentDataContainer().set(plugin.roundsKey(), PersistentDataType.INTEGER, c.getInt("magazine"));
     if (category.equals("armor")) meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(), PersistentDataType.DOUBLE, c.getDouble("durability"));
+    if (category.equals("special") && c.contains("durability")) meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(), PersistentDataType.DOUBLE, c.getDouble("durability"));
     if (category.equals("armor")) {
       meta.removeAttributeModifier(org.bukkit.attribute.Attribute.ARMOR);
       meta.removeAttributeModifier(org.bukkit.attribute.Attribute.ARMOR_TOUGHNESS);

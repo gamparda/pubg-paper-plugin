@@ -3,6 +3,7 @@ package kr.gampa.battlegrounds.listener;
 import kr.gampa.battlegrounds.BattlegroundsPlugin;
 import kr.gampa.battlegrounds.combat.*;
 import kr.gampa.battlegrounds.item.ItemRegistry;
+import kr.gampa.battlegrounds.system.PlayerSystemManager;
 import net.kyori.adventure.text.Component;
 import org.bukkit.*;
 import org.bukkit.configuration.ConfigurationSection;
@@ -15,8 +16,8 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.RayTraceResult;
 
 public final class GameplayListener implements Listener {
-  private final BattlegroundsPlugin plugin; private final ItemRegistry items; private final DamageCalculator calculator=new DamageCalculator();
-  public GameplayListener(BattlegroundsPlugin plugin,ItemRegistry items){this.plugin=plugin;this.items=items;}
+  private final BattlegroundsPlugin plugin; private final ItemRegistry items; private final PlayerSystemManager systems; private final DamageCalculator calculator=new DamageCalculator();
+  public GameplayListener(BattlegroundsPlugin plugin,ItemRegistry items,PlayerSystemManager systems){this.plugin=plugin;this.items=items;this.systems=systems;}
 
   @EventHandler(priority=EventPriority.HIGH)
   public void onInteract(PlayerInteractEvent event){
@@ -25,7 +26,7 @@ public final class GameplayListener implements Listener {
     String category=items.category(id);
     if(event.getAction().isRightClick()){
       if("weapon".equals(category)){event.setCancelled(true);fire(event.getPlayer(),held,id);}
-      else if("healing".equals(category)){event.setCancelled(true);heal(event.getPlayer(),held,id);}
+      else if(!"ammo".equals(category)&&!"armor".equals(category)){event.setCancelled(true);systems.use(event.getPlayer(),held,id);}
     } else if(event.getAction().isLeftClick()&&"weapon".equals(category)){event.setCancelled(true);reload(event.getPlayer(),held,id);}
   }
 
@@ -42,9 +43,10 @@ public final class GameplayListener implements Listener {
     double distance=shooter.getEyeLocation().distance(ray.getHitPosition().toLocation(shooter.getWorld()));
     double ratio=(ray.getHitPosition().getY()-target.getBoundingBox().getMinY())/Math.max(.01,target.getBoundingBox().getHeight());
     HitLocation hit=ratio>=plugin.getConfig().getDouble("combat.head-threshold",.72)?HitLocation.HEAD:(ratio<.35?HitLocation.LIMB:HitLocation.BODY);
+    if(target instanceof Player victim&&ratio<.55&&hasItem(victim,"frying-pan")&&victim.getLocation().getDirection().setY(0).dot(shooter.getLocation().toVector().subtract(victim.getLocation().toVector()).setY(0).normalize())<-.3){victim.getWorld().playSound(victim,Sound.BLOCK_ANVIL_LAND,1f,1.8f);shooter.sendActionBar(Component.text("프라이팬에 탄환이 막혔습니다."));return;}
     WeaponStats weapon=new WeaponStats(id,c.getDouble("base-damage"),c.getDouble("falloff-start"),range,c.getDouble("minimum-damage-multiplier"),c.getDouble("head-multiplier"),c.getDouble("body-multiplier"),c.getDouble("limb-multiplier"));
     ItemStack armorItem=armorFor(target,hit); ArmorStats armor=armorStats(armorItem);
-    DamageResult damage=calculator.calculate(weapon,hit,distance,armor); damageArmor(armorItem,damage.armorDamage()); target.setNoDamageTicks(0); target.damage(damage.healthDamage(),shooter);
+    DamageResult damage=calculator.calculate(weapon,hit,distance,armor);double before=target.getHealth();target.setNoDamageTicks(0); target.damage(damage.healthDamage()/plugin.getConfig().getDouble("combat.health-scale",5),shooter);if(target.getHealth()<before)damageArmor(armorItem,damage.armorDamage());
     target.getWorld().spawnParticle(Particle.CRIT,ray.getHitPosition().getX(),ray.getHitPosition().getY(),ray.getHitPosition().getZ(),8,.1,.1,.1,.1);
     shooter.sendActionBar(Component.text((hit==HitLocation.HEAD?"헤드샷! ":"")+"피해 "+Math.round(damage.healthDamage())+" | 탄약 "+(rounds-1)));
   }
@@ -56,11 +58,12 @@ public final class GameplayListener implements Listener {
     remove(player,ammoId,used);meta.getPersistentDataContainer().set(plugin.roundsKey(),PersistentDataType.INTEGER,current+used);gun.setItemMeta(meta);player.playSound(player,Sound.ITEM_ARMOR_EQUIP_IRON,1f,1.2f);player.sendActionBar(Component.text("재장전: "+(current+used)+" / "+capacity));
   }
 
-  private void heal(Player p,ItemStack item,String id){ConfigurationSection c=items.definition(id);double cap=c.getDouble("cap"),before=p.getHealth();if(before>=Math.min(cap,p.getMaxHealth())){p.sendActionBar(Component.text("지금은 사용할 수 없습니다."));return;}p.setHealth(Math.min(Math.min(cap,p.getMaxHealth()),before+c.getDouble("heal")));item.subtract();p.playSound(p,Sound.ITEM_HONEY_BOTTLE_DRINK,1f,1f);p.sendActionBar(Component.text("체력 회복: "+Math.round(before)+" → "+Math.round(p.getHealth())));}
+
   private ItemStack armorFor(LivingEntity target,HitLocation hit){if(!(target.getEquipment()!=null))return null;return hit==HitLocation.HEAD?target.getEquipment().getHelmet():target.getEquipment().getChestplate();}
-  private ArmorStats armorStats(ItemStack item){String id=items.itemId(item);if(id==null||!"armor".equals(items.category(id)))return null;ConfigurationSection c=items.definition(id);double durability=item.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,0d);return new ArmorStats(id,c.getDouble("reduction"),durability);}
-  private void damageArmor(ItemStack item,double damage){if(item==null||damage<=0)return;ItemMeta meta=item.getItemMeta();double left=Math.max(0,meta.getPersistentDataContainer().getOrDefault(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,0d)-damage);if(left<=0){item.setAmount(0);return;}meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,left);item.setItemMeta(meta);}
+  private ArmorStats armorStats(ItemStack item){String id=items.itemId(item);if(id==null||!"armor".equals(items.category(id)))return null;ConfigurationSection c=items.definition(id);double durability=item.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,0d);if(durability<=0&&id.startsWith("vest-"))return new ArmorStats(id,c.getDouble("broken-reduction",.20),Double.MAX_VALUE);return new ArmorStats(id,c.getDouble("reduction"),durability);}
+  private void damageArmor(ItemStack item,double damage){if(item==null||damage<=0)return;String id=items.itemId(item);ItemMeta meta=item.getItemMeta();double left=Math.max(0,meta.getPersistentDataContainer().getOrDefault(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,0d)-damage);if(left<=0&&id!=null&&id.startsWith("helmet-")){item.setAmount(0);return;}meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(),PersistentDataType.DOUBLE,left);item.setItemMeta(meta);}
   private boolean sameTeam(Player a,Player b){var ta=a.getScoreboard().getEntryTeam(a.getName());return ta!=null&&ta.equals(b.getScoreboard().getEntryTeam(b.getName()));}
+  private boolean hasItem(Player p,String id){for(ItemStack i:p.getInventory().getContents())if(id.equals(items.itemId(i)))return true;return false;}
   private int count(Player p,String id){int n=0;for(ItemStack i:p.getInventory().getContents())if(id.equals(items.itemId(i)))n+=i.getAmount();return n;}
   private void remove(Player p,String id,int amount){for(ItemStack i:p.getInventory().getContents()){if(!id.equals(items.itemId(i)))continue;int take=Math.min(amount,i.getAmount());i.subtract(take);amount-=take;if(amount==0)return;}}
 }

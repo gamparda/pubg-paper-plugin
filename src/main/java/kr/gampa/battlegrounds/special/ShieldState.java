@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.special; public final class ShieldState {private double durability;public ShieldState(double durability){if(durability<=0)throw new IllegalArgumentException();this.durability=durability;}public boolean damage(double damage){durability=Math.max(0,durability-Math.max(0,damage));return durability==0;}public double durability(){return durability;}}

@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.item; public record CarryCapacity(double base,double vest,double backpack){public CarryCapacity{if(base<0||vest<0||backpack<0)throw new IllegalArgumentException();}public double maximum(){return base+vest+backpack;}public boolean canCarry(double current,double added){return current>=0&&added>=0&&current+added<=maximum();}}
