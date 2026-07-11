@@ -36,6 +36,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 715.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   groza:
     name: '&f그로자'
     aliases:
@@ -65,6 +68,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 715.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   beryl-m762:
     name: '&f베릴 M762'
     aliases:
@@ -94,6 +100,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 740.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   mk47-mutant:
     name: '&fMk47 뮤턴트'
     aliases:
@@ -123,6 +132,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 780.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   ace32:
     name: '&fACE32'
     aliases:
@@ -152,6 +164,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 720.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   ak-alfa:
     name: '&fAK ALFA'
     aliases:
@@ -180,6 +195,10 @@ weapons:
     source-url: https://namu.wiki/w/AK%20ALFA%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 720
+    spread-degrees: 0.8
   honey-badger:
     name: '&fHoney Badger'
     aliases:
@@ -208,6 +227,10 @@ weapons:
     source-url: https://namu.wiki/w/Honey%20Badger%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 720
+    spread-degrees: 0.8
   m416:
     name: '&fM416'
     aliases:
@@ -237,6 +260,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 880.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   m16a4:
     name: '&fM16A4'
     aliases:
@@ -266,6 +292,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 910.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   scar-l:
     name: '&fSCAR-L'
     aliases:
@@ -295,6 +324,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 870.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   aug:
     name: '&fAUG'
     aliases:
@@ -324,6 +356,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 890.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   qbz:
     name: '&fQBZ'
     aliases:
@@ -353,6 +388,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 930.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   g36c:
     name: '&fG36C'
     aliases:
@@ -382,6 +420,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 870.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   k2:
     name: '&fK2'
     aliases:
@@ -411,6 +452,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 880.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   famas:
     name: '&fFAMAS'
     aliases:
@@ -440,6 +484,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 925.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   asm-abakan:
     name: '&fASM Abakan'
     aliases:
@@ -468,6 +515,10 @@ weapons:
     source-url: https://namu.wiki/w/ASM%20Abakan%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 720
+    spread-degrees: 0.8
   l85a3:
     name: '&fL85A3'
     aliases:
@@ -497,6 +548,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 900.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   mcx:
     name: '&fMCX'
     aliases:
@@ -526,6 +580,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 1000.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.8
   mini-14:
     name: '&f미니-14'
     aliases:
@@ -553,6 +610,10 @@ weapons:
     source-url: https://namu.wiki/w/%EB%AF%B8%EB%8B%88-14%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 800
+    spread-degrees: 0.35
   mk12:
     name: '&fMk12'
     aliases:
@@ -581,6 +642,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 900.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   sl8:
     name: '&fSL8'
     aliases:
@@ -608,6 +672,10 @@ weapons:
     source-url: https://namu.wiki/w/SL8%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 800
+    spread-degrees: 0.35
   qbu:
     name: '&fQBU'
     aliases:
@@ -636,6 +704,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 990.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   sks:
     name: '&fSKS'
     aliases:
@@ -664,6 +735,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 800.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   mk14:
     name: '&fMk14'
     aliases:
@@ -692,6 +766,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 853.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   slr:
     name: '&fSLR'
     aliases:
@@ -720,6 +797,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 840.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   dragunov:
     name: '&f드라구노프'
     aliases:
@@ -748,6 +828,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 830.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   m110a1:
     name: '&fM110A1'
     aliases:
@@ -776,6 +859,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 1020.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   m1-garand:
     name: '&fM1 Garand'
     aliases:
@@ -804,6 +890,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 857.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   vss:
     name: '&fVSS'
     aliases:
@@ -832,6 +921,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 430.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.35
   kar98k:
     name: '&fKar98k'
     aliases:
@@ -860,6 +952,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 785.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   m24:
     name: '&fM24'
     aliases:
@@ -888,6 +983,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 815.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   dsr-1:
     name: '&fDSR-1'
     aliases:
@@ -915,6 +1013,10 @@ weapons:
     source-url: https://namu.wiki/w/DSR-1%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    bullet-speed-mps: 850
+    spread-degrees: 0.15
   dsr-sniper:
     name: '&fDSR Sniper'
     aliases:
@@ -942,6 +1044,10 @@ weapons:
     source-url: https://namu.wiki/w/DSR%20Sniper%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    bullet-speed-mps: 850
+    spread-degrees: 0.15
   mosin-nagant:
     name: '&f모신 나강'
     aliases:
@@ -970,6 +1076,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 785.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   awm:
     name: '&fAWM'
     aliases:
@@ -998,6 +1107,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 954.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   win94:
     name: '&fWin94'
     aliases:
@@ -1026,6 +1138,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 760.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   lynx-amr:
     name: '&f링스 AMR'
     aliases:
@@ -1054,6 +1169,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 1200.0
+    gravity-scale: 0.95
+    drag-per-second: 0.01
+    spread-degrees: 0.15
   micro-uzi:
     name: '&f마이크로 UZI'
     aliases:
@@ -1083,6 +1201,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 350.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   ump45:
     name: '&fUMP45'
     aliases:
@@ -1112,6 +1233,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   tommy-gun:
     name: '&f토미 건'
     aliases:
@@ -1141,6 +1265,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 280.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   vector:
     name: '&fVector'
     aliases:
@@ -1170,6 +1297,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 380.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   mp5k:
     name: '&fMP5K'
     aliases:
@@ -1199,6 +1329,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 380.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   mp9:
     name: '&fMP9'
     aliases:
@@ -1228,6 +1361,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 400.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   js9:
     name: '&fJS9'
     aliases:
@@ -1257,6 +1393,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 400.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   pp-19-bizon:
     name: '&fPP-19 Bizon'
     aliases:
@@ -1286,6 +1425,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 380.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   p90:
     name: '&fP90'
     aliases:
@@ -1315,6 +1457,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 715.0
+    gravity-scale: 1.15
+    drag-per-second: 0.01
+    spread-degrees: 1.35
   s1897:
     name: '&fS1897'
     aliases:
@@ -1345,6 +1490,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   s686:
     name: '&fS686'
     aliases:
@@ -1375,6 +1522,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   s12k:
     name: '&fS12K'
     aliases:
@@ -1405,6 +1554,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   dbs:
     name: '&fDBS'
     aliases:
@@ -1435,6 +1586,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   m1014:
     name: '&fM1014'
     aliases:
@@ -1464,6 +1617,9 @@ weapons:
     spread-degrees: 7.0
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.3
+    drag-per-second: 0.01
+    bullet-speed-mps: 400
   ns2000:
     name: '&fNS2000'
     aliases:
@@ -1494,6 +1650,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   mp155-ultima:
     name: '&fMP155 Ultima'
     aliases:
@@ -1524,6 +1682,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 360.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   o12:
     name: '&fO12'
     aliases:
@@ -1554,6 +1714,8 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 625.0
+    gravity-scale: 1.3
+    drag-per-second: 0.01
   m249:
     name: '&fM249'
     aliases:
@@ -1582,6 +1744,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 915.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 1.0
   mg3:
     name: '&fMG3'
     aliases:
@@ -1610,6 +1775,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 820.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 1.0
   dp-28:
     name: '&fDP-28'
     aliases:
@@ -1638,6 +1806,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 840.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 1.0
   m134-minigun:
     name: '&fM134 Minigun'
     aliases:
@@ -1665,6 +1836,10 @@ weapons:
     source-url: https://namu.wiki/w/M134%20Minigun%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 750
+    spread-degrees: 1.0
   mg5:
     name: '&fMG5'
     aliases:
@@ -1692,6 +1867,10 @@ weapons:
     source-url: https://namu.wiki/w/MG5%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    bullet-speed-mps: 750
+    spread-degrees: 1.0
   crossbow:
     name: '&f석궁'
     aliases:
@@ -1720,6 +1899,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 160.0
+    gravity-scale: 1.4
+    drag-per-second: 0.01
+    spread-degrees: 0.2
   tactical-crossbow:
     name: '&f전술 석궁'
     aliases:
@@ -1747,6 +1929,10 @@ weapons:
     source-url: https://namu.wiki/w/%EC%A0%84%EC%88%A0%20%EC%84%9D%EA%B6%81%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.4
+    drag-per-second: 0.01
+    bullet-speed-mps: 105
+    spread-degrees: 0.2
   panzerfaust:
     name: '&f판처파우스트'
     aliases:
@@ -1777,6 +1963,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
     bullet-speed-mps: 62.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   rpg-7:
     name: '&fRPG-7'
     aliases:
@@ -1806,6 +1995,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   m3e1-a:
     name: '&fM3E1-A'
     aliases:
@@ -1835,6 +2027,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   at4-a:
     name: '&fAT4-A'
     aliases:
@@ -1864,6 +2059,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   m202-bazooka:
     name: '&fM202 Bazooka'
     aliases:
@@ -1893,6 +2091,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   mortar:
     name: '&f박격포'
     aliases:
@@ -1923,6 +2124,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
     bullet-speed-mps: 40.0
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   m32-mgl:
     name: '&fM32 MGL'
     aliases:
@@ -1952,6 +2156,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   m79:
     name: '&fM79'
     aliases:
@@ -1981,6 +2188,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   p92:
     name: '&fP92'
     aliases:
@@ -2009,6 +2219,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 380.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   p18c:
     name: '&fP18C'
     aliases:
@@ -2038,6 +2251,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 375.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   skorpion:
     name: '&fSkorpion'
     aliases:
@@ -2066,6 +2282,10 @@ weapons:
     source-url: https://namu.wiki/w/Skorpion%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    bullet-speed-mps: 360
+    spread-degrees: 1.2
   dual-mp7:
     name: '&fDual MP7'
     aliases:
@@ -2093,6 +2313,10 @@ weapons:
     source-url: https://namu.wiki/w/Dual%20MP7%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    bullet-speed-mps: 360
+    spread-degrees: 1.2
   deagle:
     name: '&fDeagle'
     aliases:
@@ -2121,6 +2345,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 450.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   p1911:
     name: '&fP1911'
     aliases:
@@ -2149,6 +2376,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 250.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   r45:
     name: '&fR45'
     aliases:
@@ -2177,6 +2407,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 330.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   r1895:
     name: '&fR1895'
     aliases:
@@ -2205,6 +2438,9 @@ weapons:
     source-checked-at: '2026-07-11'
     balance-source: namuwiki-pc-table
     bullet-speed-mps: 330.0
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    spread-degrees: 1.2
   sawed-off:
     name: '&f소드오프'
     aliases:
@@ -2232,6 +2468,10 @@ weapons:
     source-url: https://namu.wiki/w/%EC%86%8C%EB%93%9C%EC%98%A4%ED%94%84%28PUBG%3A%20BATTLEGROUNDS%29
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.2
+    drag-per-second: 0.01
+    bullet-speed-mps: 360
+    spread-degrees: 1.2
   flare-gun:
     name: '&f플레어건'
     aliases:
@@ -2260,6 +2500,9 @@ weapons:
     effect: flare
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   green-flare-gun:
     name: '&f그린 플레어건'
     aliases:
@@ -2288,6 +2531,9 @@ weapons:
     effect: flare
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   sickle:
     name: '&f낫'
     aliases:
@@ -2316,6 +2562,9 @@ weapons:
     melee: true
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   machete:
     name: '&f마체테'
     aliases:
@@ -2344,6 +2593,9 @@ weapons:
     melee: true
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   crowbar:
     name: '&f쇠지렛대'
     aliases:
@@ -2372,6 +2624,9 @@ weapons:
     melee: true
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   pickaxe:
     name: '&f곡괭이'
     aliases:
@@ -2400,6 +2655,9 @@ weapons:
     melee: true
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   frying-pan:
     name: '&f프라이팬'
     aliases:
@@ -2428,6 +2686,9 @@ weapons:
     melee: true
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   frag-grenade:
     name: '&f세열수류탄'
     aliases:
@@ -2457,6 +2718,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   smoke-grenade:
     name: '&f연막탄'
     aliases:
@@ -2487,6 +2751,9 @@ weapons:
     effect: smoke
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   stun-grenade:
     name: '&f섬광탄'
     aliases:
@@ -2517,6 +2784,9 @@ weapons:
     effect: flash
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   molotov-cocktail:
     name: '&f화염병'
     aliases:
@@ -2547,6 +2817,9 @@ weapons:
     effect: fire
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   sticky-bomb:
     name: '&f점착폭탄'
     aliases:
@@ -2576,6 +2849,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   bluezone-grenade:
     name: '&f블루존 수류탄'
     aliases:
@@ -2606,6 +2882,9 @@ weapons:
     effect: bluezone
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
   c4:
     name: '&fC4'
     aliases:
@@ -2635,6 +2914,9 @@ weapons:
     fuse-ticks: 60
     source-checked-at: '2026-07-11'
     balance-source: category-fallback
+    gravity-scale: 1.0
+    drag-per-second: 0.01
+    spread-degrees: 0.0
 ammo:
   ammo-556:
     name: '&a5.56mm 탄약'
@@ -3339,3 +3621,17 @@ vehicle-system:
   roadkill-min-speed-kmh: 25
   collision-damage-multiplier: 1.0
   show-actionbar: true
+ballistics:
+  enabled: true
+  gravity-mps2: 9.81
+  drag-per-second: 0.01
+  trail-spacing-blocks: 2.0
+  drop-marker-spacing-blocks: 25.0
+  trail-size: 0.65
+  trail-color:
+    r: 255
+    g: 210
+    b: 80
+  shotgun-tracer-pellets: 3
+  ray-size: 0.18
+  max-active-bullets: 500
