@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.combat; public final class WeaponMechanics{private WeaponMechanics(){}public static int shotsForTrigger(String mode,int burstSize,int rounds){if(rounds<=0)return 0;return "burst".equals(mode)?Math.min(Math.max(1,burstSize),rounds):1;}}

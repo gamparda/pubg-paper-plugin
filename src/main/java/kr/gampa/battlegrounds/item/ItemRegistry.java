@@ -40,6 +40,7 @@ public final class ItemRegistry {
     meta.getPersistentDataContainer().set(plugin.itemIdKey(), PersistentDataType.STRING, id);
     String category=category(id); meta.getPersistentDataContainer().set(plugin.itemTypeKey(), PersistentDataType.STRING, category);
     if (category.equals("weapon")) meta.getPersistentDataContainer().set(plugin.roundsKey(), PersistentDataType.INTEGER, c.getInt("magazine"));
+    if (category.equals("weapon")) meta.getPersistentDataContainer().set(plugin.fireModeKey(), PersistentDataType.STRING, c.getStringList("fire-modes").isEmpty()?"single":c.getStringList("fire-modes").getFirst());
     if (category.equals("armor")) meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(), PersistentDataType.DOUBLE, c.getDouble("durability"));
     if (category.equals("special") && c.contains("durability")) meta.getPersistentDataContainer().set(plugin.armorDurabilityKey(), PersistentDataType.DOUBLE, c.getDouble("durability"));
     if (category.equals("armor")) {
@@ -49,4 +50,5 @@ public final class ItemRegistry {
     item.setItemMeta(meta); return item;
   }
   public String itemId(ItemStack item) { if (item == null || !item.hasItemMeta()) return null; return item.getItemMeta().getPersistentDataContainer().get(plugin.itemIdKey(), PersistentDataType.STRING); }
+  public List<String> search(String query) {String q=query.toLowerCase(Locale.ROOT);if(definitions.containsKey(q))return List.of(q);List<String> exact=new ArrayList<>(),prefix=new ArrayList<>(),contains=new ArrayList<>();for(var e:definitions.entrySet()){String id=e.getKey(),name=org.bukkit.ChatColor.stripColor(org.bukkit.ChatColor.translateAlternateColorCodes('&',e.getValue().getString("name",id))).toLowerCase(Locale.ROOT);List<String> aliases=e.getValue().getStringList("aliases");boolean aliasExact=aliases.stream().anyMatch(a->a.equalsIgnoreCase(q));if(id.equalsIgnoreCase(q)||name.equals(q)||aliasExact)exact.add(id);else if(id.startsWith(q)||name.startsWith(q)||aliases.stream().anyMatch(a->a.toLowerCase(Locale.ROOT).startsWith(q)))prefix.add(id);else if(id.contains(q)||name.contains(q)||aliases.stream().anyMatch(a->a.toLowerCase(Locale.ROOT).contains(q)))contains.add(id);}return !exact.isEmpty()?exact:!prefix.isEmpty()?prefix:contains;}
 }

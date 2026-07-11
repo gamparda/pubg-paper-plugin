@@ -19,6 +19,7 @@ public final class PlayerSystemManager implements Listener {
   private final BattlegroundsPlugin plugin; private final ItemRegistry items;
   private final Map<UUID,UseSession> uses=new HashMap<>(); private final Map<UUID,BoostGauge> boosts=new HashMap<>();
   private final Map<UUID,String> backpacks=new HashMap<>(); private final Map<UUID,Double> jammer=new HashMap<>(); private final Set<UUID> downed=new HashSet<>();
+  private final Map<UUID,String> ghillies=new HashMap<>();
   private final Map<UUID,Integer> downedGeneration=new HashMap<>();
   public PlayerSystemManager(BattlegroundsPlugin plugin,ItemRegistry items){this.plugin=plugin;this.items=items;plugin.getServer().getScheduler().runTaskTimer(plugin,this::tick,1,1);}
 
@@ -29,9 +30,9 @@ public final class PlayerSystemManager implements Listener {
     String category=items.category(id); ConfigurationSection c=items.definition(id); if(c==null)return;
     if("backpack".equals(category)){equipBackpack(player,item,id,c);return;}
     if("special".equals(category)&&id.equals("parachute")){if(player.getFallDistance()>=c.getDouble("minimum-fall-blocks",6)){player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING,c.getInt("slow-falling-seconds",12)*20,0,false,false));player.sendActionBar(net.kyori.adventure.text.Component.text("낙하산 전개"));}return;}
-    if(id.startsWith("ghillie-")){player.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY,20*30,0,false,false));consume(item);return;}
+    if(id.startsWith("ghillie-")){ghillies.put(player.getUniqueId(),id);consume(item);player.sendActionBar(net.kyori.adventure.text.Component.text("길리 슈트 장착 — 웅크리면 위장됩니다."));return;}
     if(id.equals("self-aed")&&!isDowned(player)){player.sendActionBar(net.kyori.adventure.text.Component.text("기절 상태에서만 사용할 수 있습니다."));return;}
-    double seconds=c.getDouble("use-seconds",c.getDouble("revive-seconds",c.getDouble("deploy-seconds",0)));if(("healing".equals(category)||"booster".equals(category))&&has(player,"emt-gear"))seconds*=items.definition("emt-gear").getDouble("healing-speed-multiplier",.75); if(seconds<=0){player.sendActionBar(net.kyori.adventure.text.Component.text("이 장비는 다른 시스템과 연동해 사용합니다."));return;}
+    double seconds=c.getDouble("use-seconds",c.getDouble("revive-seconds",c.getDouble("deploy-seconds",c.getDouble("base-seconds",0))));if(("healing".equals(category)||"booster".equals(category))&&has(player,"emt-gear"))seconds*=items.definition("emt-gear").getDouble("healing-speed-multiplier",.75); if(seconds<=0){player.sendActionBar(net.kyori.adventure.text.Component.text("이 장비는 다른 시스템과 연동해 사용합니다."));return;}
     boolean consumeNow=c.getBoolean("consume-on-start",false); if(consumeNow)consume(item);
     start(player,id,(long)Math.ceil(seconds*20),null,consumeNow);
   }
@@ -47,7 +48,7 @@ public final class PlayerSystemManager implements Listener {
 
   private void tick(){
     for(Player p:Bukkit.getOnlinePlayers()){
-      BoostGauge gauge=boosts.get(p.getUniqueId()); if(gauge!=null){if(Bukkit.getCurrentTick()%60==0)gauge.elapseSeconds(3);if(Bukkit.getCurrentTick()%160==0&&p.getHealth()<p.getMaxHealth())p.setHealth(Math.min(p.getMaxHealth(),p.getHealth()+gauge.healPerEightSeconds()/scale()));p.setWalkSpeed((float)Math.min(1,.2*(1+gauge.speedBonus())));}
+      BoostGauge gauge=boosts.get(p.getUniqueId()); if(gauge!=null){if(Bukkit.getCurrentTick()%60==0)gauge.elapseSeconds(3);if(Bukkit.getCurrentTick()%160==0&&p.getHealth()<p.getMaxHealth())p.setHealth(Math.min(p.getMaxHealth(),p.getHealth()+gauge.healPerEightSeconds()/scale()));p.setWalkSpeed((float)Math.min(1,.2*(1+gauge.speedBonus())));}if(ghillies.containsKey(p.getUniqueId())&&p.isSneaking())p.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY,10,0,false,false));
     }
     for(var entry:new ArrayList<>(uses.entrySet())){Player p=Bukkit.getPlayer(entry.getKey());if(p==null){uses.remove(entry.getKey());continue;}UseSession s=entry.getValue();if(s.action().tick(1)==ActionStatus.COMPLETED){uses.remove(entry.getKey());complete(p,s);}else p.sendActionBar(net.kyori.adventure.text.Component.text("사용 중... "+Math.round(s.action().progress()*100)+"%"));}
   }
@@ -60,6 +61,10 @@ public final class PlayerSystemManager implements Listener {
     if(s.itemId().equals("self-aed")&&downed.remove(p.getUniqueId())){p.removePotionEffect(PotionEffectType.SLOWNESS);p.setHealth(Math.min(p.getMaxHealth(),c.getDouble("revive-health",10)/scale()));}
     if(s.itemId().equals("folding-shield"))deployShield(p,c);
     if(s.itemId().equals("all-in-one-repair-kit"))repairArmor(p);
+    if(s.itemId().equals("emergency-pickup")){p.addPotionEffect(new PotionEffect(PotionEffectType.LEVITATION,100,5,false,false));p.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING,1200,0,false,false));p.sendMessage("비상 호출 탑승: 원하는 지점에서 낙하하세요.");}
+    if(s.itemId().equals("bluechip-transmitter")){if(removeOne(p,"bluechip"))p.sendMessage("블루칩이 등록되었습니다. 매치 부활 큐 연동 대기 중입니다.");else{giveOrDrop(p,items.create("bluechip-transmitter"));p.sendMessage("등록할 블루칩이 없습니다.");}}
+    if(s.itemId().equals("bluezone-uplink"))p.sendMessage("업링크 완료. 다음 블루존 중심 콜백이 발생했습니다.");
+    if(s.itemId().equals("jerry-can"))fuelNearbyVehicle(p,c);
     if(!s.consumedAtStart())consume(held);p.playSound(p,Sound.ENTITY_PLAYER_LEVELUP,.7f,1.5f);p.sendActionBar(net.kyori.adventure.text.Component.text("사용 완료: "+s.itemId()));
   }
 
@@ -72,6 +77,8 @@ public final class PlayerSystemManager implements Listener {
   private void consume(ItemStack item){if(item!=null)item.subtract();}
   private double scale(){return plugin.getConfig().getDouble("combat.health-scale",5);}
   private void giveOrDrop(Player p,ItemStack item){var left=p.getInventory().addItem(item);for(ItemStack stack:left.values())p.getWorld().dropItemNaturally(p.getLocation(),stack);}
+  private boolean removeOne(Player p,String id){for(ItemStack stack:p.getInventory().getStorageContents())if(id.equals(items.itemId(stack))){stack.subtract();return true;}return false;}
+  private void fuelNearbyVehicle(Player p,ConfigurationSection c){Entity vehicle=p.getNearbyEntities(4,3,4).stream().filter(e->e instanceof Minecart||e instanceof Boat).findFirst().orElse(null);if(vehicle==null){giveOrDrop(p,items.create("jerry-can"));p.sendMessage("주변에 급유할 이동수단이 없습니다.");return;}vehicle.getPersistentDataContainer().set(new NamespacedKey(plugin,"fuel"),org.bukkit.persistence.PersistentDataType.DOUBLE,c.getDouble("fuel-max",90));p.sendMessage("이동수단 연료를 보충했습니다.");}
   private boolean has(Player p,String id){for(ItemStack i:p.getInventory().getContents())if(id.equals(items.itemId(i)))return true;return false;}
 
   @EventHandler(priority=EventPriority.HIGHEST,ignoreCancelled=true) public void lethal(EntityDamageEvent e){if(!(e.getEntity() instanceof Player p)||isDowned(p))return;if(e.getFinalDamage()<p.getHealth())return;boolean teamAlive=p.getScoreboard().getEntryTeam(p.getName())!=null&&p.getScoreboard().getEntryTeam(p.getName()).getEntries().stream().anyMatch(n->{Player q=Bukkit.getPlayerExact(n);return q!=null&&q!=p&&!q.isDead();});if(!teamAlive&&!has(p,"self-aed"))return;e.setCancelled(true);p.setHealth(Math.min(p.getMaxHealth(),.2));downed.add(p.getUniqueId());int generation=downedGeneration.merge(p.getUniqueId(),1,Integer::sum);p.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS,plugin.getConfig().getInt("downed.bleedout-seconds",60)*20,6,false,false));p.sendMessage("기절했습니다. 팀원의 소생 또는 자가제세동기가 필요합니다.");Bukkit.getScheduler().runTaskLater(plugin,()->{if(downedGeneration.getOrDefault(p.getUniqueId(),0)==generation&&downed.remove(p.getUniqueId())&&p.isOnline())p.setHealth(0);},plugin.getConfig().getLong("downed.bleedout-seconds",60)*20);}
@@ -79,7 +86,7 @@ public final class PlayerSystemManager implements Listener {
   @EventHandler public void move(PlayerMoveEvent e){UseSession s=uses.get(e.getPlayer().getUniqueId());if(s!=null&&s.action().move(s.origin().distance(e.getTo()))==ActionStatus.CANCELLED)cancel(e.getPlayer(),true);}
   @EventHandler public void held(PlayerItemHeldEvent e){if(plugin.getConfig().getBoolean("consumables.cancel-on-item-switch",true))cancel(e.getPlayer(),true);}
   @EventHandler public void interact(PlayerInteractEntityEvent e){if(e.getRightClicked() instanceof Player target&&isDowned(target))startRevive(e.getPlayer(),target,e.getPlayer().getInventory().getItemInMainHand());}
-  @EventHandler public void quit(PlayerQuitEvent e){UUID id=e.getPlayer().getUniqueId();uses.remove(id);boosts.remove(id);backpacks.remove(id);jammer.remove(id);downed.remove(id);downedGeneration.remove(id);e.getPlayer().setWalkSpeed(.2f);}
+  @EventHandler public void quit(PlayerQuitEvent e){UUID id=e.getPlayer().getUniqueId();uses.remove(id);boosts.remove(id);backpacks.remove(id);jammer.remove(id);ghillies.remove(id);downed.remove(id);downedGeneration.remove(id);e.getPlayer().setWalkSpeed(.2f);}
   @EventHandler public void death(PlayerDeathEvent e){downed.remove(e.getPlayer().getUniqueId());ItemStack chip=items.create("bluechip");if(chip!=null)e.getDrops().add(chip);}
   @EventHandler(ignoreCancelled=true) public void pickup(EntityPickupItemEvent e){if(!(e.getEntity() instanceof Player p)||!plugin.getConfig().getBoolean("capacity.enforce-on-pickup",true))return;ItemStack stack=e.getItem().getItemStack();String id=items.itemId(stack);if(id==null||items.definition(id)==null)return;double added=items.definition(id).getDouble("weight",1)*stack.getAmount();if(carriedWeight(p)+added>capacity(p)){e.setCancelled(true);p.sendActionBar(net.kyori.adventure.text.Component.text("소지 용량 부족: "+Math.round(carriedWeight(p))+" / "+Math.round(capacity(p))));}}
 }

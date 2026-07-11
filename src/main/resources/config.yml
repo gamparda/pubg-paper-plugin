@@ -7,71 +7,2697 @@ combat:
   hit-particle: CRIT
 weapons:
   akm:
-    name: "&6AKM"
+    name: '&fAKM'
+    aliases:
+    - akm
+    - AKM
+    category: ar
+    caliber: '7.62'
     material: IRON_HORSE_ARMOR
     ammo-id: ammo-762
-    base-damage: 24.0
-    falloff-start: 45.0
-    max-range: 120.0
-    minimum-damage-multiplier: 0.55
-    head-multiplier: 2.0
-    body-multiplier: 1.0
-    limb-multiplier: 0.75
-    magazine: 30
-    cooldown-ticks: 3
-  m416:
-    name: "&eM416"
-    material: DIAMOND_HORSE_ARMOR
-    ammo-id: ammo-556
-    base-damage: 21.0
+    base-damage: 48.0
     falloff-start: 55.0
-    max-range: 135.0
-    minimum-damage-multiplier: 0.60
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
     head-multiplier: 2.0
     body-multiplier: 1.0
     limb-multiplier: 0.75
     magazine: 30
+    rpm: 600.0
     cooldown-ticks: 2
-  kar98k:
-    name: "&cKar98k"
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/AKM%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 715.0
+  groza:
+    name: '&f그로자'
+    aliases:
+    - groza
+    - 그로자
+    category: ar
+    caliber: '7.62'
     material: GOLDEN_HORSE_ARMOR
     ammo-id: ammo-762
-    base-damage: 42.0
-    falloff-start: 100.0
-    max-range: 220.0
-    minimum-damage-multiplier: 0.65
-    head-multiplier: 2.25
+    base-damage: 47.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
     body-multiplier: 1.0
-    limb-multiplier: 0.70
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 750.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/%EA%B7%B8%EB%A1%9C%EC%9E%90%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 715.0
+  beryl-m762:
+    name: '&f베릴 M762'
+    aliases:
+    - beryl m762
+    - 베릴 M762
+    category: ar
+    caliber: '7.62'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 44.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%B2%A0%EB%A6%B4%20M762%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 740.0
+  mk47-mutant:
+    name: '&fMk47 뮤턴트'
+    aliases:
+    - mk47 mutant
+    - Mk47 뮤턴트
+    category: ar
+    caliber: '7.62'
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 49.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - burst
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/Mk47%20%EB%AE%A4%ED%84%B4%ED%8A%B8%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 780.0
+  ace32:
+    name: '&fACE32'
+    aliases:
+    - ace32
+    - ACE32
+    category: ar
+    caliber: '7.62'
+    material: BLAZE_ROD
+    ammo-id: ammo-762
+    base-damage: 43.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 680.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/ACE32%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 720.0
+  ak-alfa:
+    name: '&fAK ALFA'
+    aliases:
+    - ak alfa
+    - AK ALFA
+    category: ar
+    caliber: '7.62'
+    material: BRUSH
+    ammo-id: ammo-762
+    base-damage: 46.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.58
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 640.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/AK%20ALFA%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+  honey-badger:
+    name: '&fHoney Badger'
+    aliases:
+    - honey badger
+    - Honey Badger
+    category: ar
+    caliber: '7.62'
+    material: SPYGLASS
+    ammo-id: ammo-762
+    base-damage: 42.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.58
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 690.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/Honey%20Badger%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+  m416:
+    name: '&fM416'
+    aliases:
+    - m416
+    - M416
+    category: ar
+    caliber: '5.56'
+    material: MACE
+    ammo-id: ammo-556
+    base-damage: 40.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M416%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 880.0
+  m16a4:
+    name: '&fM16A4'
+    aliases:
+    - m16a4
+    - M16A4
+    category: ar
+    caliber: '5.56'
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 43.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - burst
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M16A4%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 910.0
+  scar-l:
+    name: '&fSCAR-L'
+    aliases:
+    - scar-l
+    - SCAR-L
+    category: ar
+    caliber: '5.56'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 42.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 650.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/SCAR-L%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 870.0
+  aug:
+    name: '&fAUG'
+    aliases:
+    - aug
+    - AUG
+    category: ar
+    caliber: '5.56'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 40.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 720.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/AUG%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 890.0
+  qbz:
+    name: '&fQBZ'
+    aliases:
+    - qbz
+    - QBZ
+    category: ar
+    caliber: '5.56'
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 42.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 650.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/QBZ%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 930.0
+  g36c:
+    name: '&fG36C'
+    aliases:
+    - g36c
+    - G36C
+    category: ar
+    caliber: '5.56'
+    material: BLAZE_ROD
+    ammo-id: ammo-556
+    base-damage: 41.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/G36C%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 870.0
+  k2:
+    name: '&fK2'
+    aliases:
+    - k2
+    - K2
+    category: ar
+    caliber: '5.56'
+    material: BRUSH
+    ammo-id: ammo-556
+    base-damage: 41.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/K2%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 880.0
+  famas:
+    name: '&fFAMAS'
+    aliases:
+    - famas
+    - FAMAS
+    category: ar
+    caliber: '5.56'
+    material: SPYGLASS
+    ammo-id: ammo-556
+    base-damage: 39.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 900.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/FAMAS%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 925.0
+  asm-abakan:
+    name: '&fASM Abakan'
+    aliases:
+    - asm abakan
+    - ASM Abakan
+    category: ar
+    caliber: '5.56'
+    material: MACE
+    ammo-id: ammo-556
+    base-damage: 45.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.58
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - burst
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/ASM%20Abakan%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  l85a3:
+    name: '&fL85A3'
+    aliases:
+    - l85a3
+    - L85A3
+    category: ar
+    caliber: '5.56'
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 45.1
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.8204
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 566.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/L85A3%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 900.0
+  mcx:
+    name: '&fMCX'
+    aliases:
+    - mcx
+    - MCX
+    category: ar
+    caliber: '5.56'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 35.0
+    falloff-start: 55.0
+    max-range: 145.0
+    minimum-damage-multiplier: 0.7143
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 800.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/MCX%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 1000.0
+  mini-14:
+    name: '&f미니-14'
+    aliases:
+    - mini-14
+    - 미니-14
+    category: dmr
+    caliber: '5.56'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 53.0
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.68
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 360
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%AF%B8%EB%8B%88-14%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  mk12:
+    name: '&fMk12'
+    aliases:
+    - mk12
+    - Mk12
+    category: dmr
+    caliber: '5.56'
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 46.2
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.789
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 330.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/Mk12%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 900.0
+  sl8:
+    name: '&fSL8'
+    aliases:
+    - sl8
+    - SL8
+    category: dmr
+    caliber: '5.56'
+    material: BLAZE_ROD
+    ammo-id: ammo-556
+    base-damage: 52.0
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.9615
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 360
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/SL8%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+  qbu:
+    name: '&fQBU'
+    aliases:
+    - qbu
+    - QBU
+    category: dmr
+    caliber: '5.56'
+    material: BRUSH
+    ammo-id: ammo-556
+    base-damage: 44.1
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.789
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 330.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/QBU%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 990.0
+  sks:
+    name: '&fSKS'
+    aliases:
+    - sks
+    - SKS
+    category: dmr
+    caliber: '7.62'
+    material: SPYGLASS
+    ammo-id: ammo-762
+    base-damage: 49.35
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.8
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 366.0
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/SKS%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 800.0
+  mk14:
+    name: '&fMk14'
+    aliases:
+    - mk14
+    - Mk14
+    category: dmr
+    caliber: '7.62'
+    material: MACE
+    ammo-id: ammo-762
+    base-damage: 55.65
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.85
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 400.0
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/Mk14%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 853.0
+  slr:
+    name: '&fSLR'
+    aliases:
+    - slr
+    - SLR
+    category: dmr
+    caliber: '7.62'
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 51.45
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.778
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 300.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/SLR%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 840.0
+  dragunov:
+    name: '&f드라구노프'
+    aliases:
+    - dragunov
+    - 드라구노프
+    category: dmr
+    caliber: '7.62'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 55.65
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 180.0
+    cooldown-ticks: 7
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%93%9C%EB%9D%BC%EA%B5%AC%EB%85%B8%ED%94%84%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 830.0
+  m110a1:
+    name: '&fM110A1'
+    aliases:
+    - m110a1
+    - M110A1
+    category: dmr
+    caliber: '7.62'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 58.8
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.778
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 360
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M110A1%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 1020.0
+  m1-garand:
+    name: '&fM1 Garand'
+    aliases:
+    - m1 garand
+    - M1 Garand
+    category: dmr
+    caliber: '7.62'
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 68.0
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.68
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 600.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M1%20Garand%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 857.0
+  vss:
+    name: '&fVSS'
+    aliases:
+    - vss
+    - VSS
+    category: dmr
+    caliber: 9mm
+    material: BLAZE_ROD
+    ammo-id: ammo-9
+    base-damage: 47.25
+    falloff-start: 90.0
+    max-range: 210.0
+    minimum-damage-multiplier: 0.68
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 20
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/VSS%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 430.0
+  kar98k:
+    name: '&fKar98k'
+    aliases:
+    - kar98k
+    - Kar98k
+    category: sr
+    caliber: '7.62'
+    material: BRUSH
+    ammo-id: ammo-762
+    base-damage: 102.7
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.95
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
     magazine: 5
-    cooldown-ticks: 24
-  ump45:
-    name: "&aUMP45"
+    rpm: 37.0
+    cooldown-ticks: 32
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/Kar98k%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 785.0
+  m24:
+    name: '&fM24'
+    aliases:
+    - m24
+    - M24
+    category: sr
+    caliber: '7.62'
+    material: SPYGLASS
+    ammo-id: ammo-762
+    base-damage: 97.5
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.95
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 39.0
+    cooldown-ticks: 31
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M24%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 815.0
+  dsr-1:
+    name: '&fDSR-1'
+    aliases:
+    - dsr-1
+    - DSR-1
+    category: sr
+    caliber: '7.62'
+    material: MACE
+    ammo-id: ammo-762
+    base-damage: 81.0
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.72
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 55
+    cooldown-ticks: 22
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/DSR-1%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  dsr-sniper:
+    name: '&fDSR Sniper'
+    aliases:
+    - dsr sniper
+    - DSR Sniper
+    category: sr
+    caliber: '7.62'
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 77.0
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.72
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 55
+    cooldown-ticks: 22
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/DSR%20Sniper%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  mosin-nagant:
+    name: '&f모신 나강'
+    aliases:
+    - mosin nagant
+    - 모신 나강
+    category: sr
+    caliber: '7.62'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 102.7
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.95
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 37.0
+    cooldown-ticks: 32
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%AA%A8%EC%8B%A0%20%EB%82%98%EA%B0%95%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 785.0
+  awm:
+    name: '&fAWM'
+    aliases:
+    - awm
+    - AWM
+    category: sr
+    caliber: '.300'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-300
+    base-damage: 136.5
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.8996
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 32.0
+    cooldown-ticks: 38
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/AWM%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 954.0
+  win94:
+    name: '&fWin94'
+    aliases:
+    - win94
+    - Win94
+    category: sr
+    caliber: '.45'
     material: LEATHER_HORSE_ARMOR
     ammo-id: ammo-45
-    base-damage: 18.0
-    falloff-start: 25.0
-    max-range: 75.0
-    minimum-damage-multiplier: 0.45
-    head-multiplier: 1.8
+    base-damage: 85.8
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.9
+    head-multiplier: 2.0
     body-multiplier: 1.0
-    limb-multiplier: 0.8
-    magazine: 25
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 100.0
+    cooldown-ticks: 12
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/Win94%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 760.0
+  lynx-amr:
+    name: '&f링스 AMR'
+    aliases:
+    - lynx amr
+    - 링스 AMR
+    category: sr
+    caliber: '.50'
+    material: BLAZE_ROD
+    ammo-id: ammo-50
+    base-damage: 153.4
+    falloff-start: 120.0
+    max-range: 260.0
+    minimum-damage-multiplier: 0.9
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 86.0
+    cooldown-ticks: 14
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/%EB%A7%81%EC%8A%A4%20AMR%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 1200.0
+  micro-uzi:
+    name: '&f마이크로 UZI'
+    aliases:
+    - micro uzi
+    - 마이크로 UZI
+    category: smg
+    caliber: 9mm
+    material: BRUSH
+    ammo-id: ammo-9
+    base-damage: 27.3
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 1250.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%20UZI%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 350.0
+  ump45:
+    name: '&fUMP45'
+    aliases:
+    - ump45
+    - UMP45
+    category: smg
+    caliber: 9mm
+    material: SPYGLASS
+    ammo-id: ammo-9
+    base-damage: 42.0
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.735
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 670.0
     cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/UMP45%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  tommy-gun:
+    name: '&f토미 건'
+    aliases:
+    - tommy gun
+    - 토미 건
+    category: smg
+    caliber: 9mm
+    material: MACE
+    ammo-id: ammo-9
+    base-damage: 40.0
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.735
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 750.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%ED%86%A0%EB%AF%B8%20%EA%B1%B4%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 280.0
+  vector:
+    name: '&fVector'
+    aliases:
+    - vector
+    - Vector
+    category: smg
+    caliber: 9mm
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-9
+    base-damage: 32.55
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 1101.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/Vector%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 380.0
+  mp5k:
+    name: '&fMP5K'
+    aliases:
+    - mp5k
+    - MP5K
+    category: smg
+    caliber: 9mm
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-9
+    base-damage: 33.6
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 900.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/MP5K%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 380.0
+  mp9:
+    name: '&fMP9'
+    aliases:
+    - mp9
+    - MP9
+    category: smg
+    caliber: 9mm
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-9
+    base-damage: 32.55
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 1000.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/MP9%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 400.0
+  js9:
+    name: '&fJS9'
+    aliases:
+    - js9
+    - JS9
+    category: smg
+    caliber: 9mm
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-9
+    base-damage: 33.6
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 900.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/JS9%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 400.0
+  pp-19-bizon:
+    name: '&fPP-19 Bizon'
+    aliases:
+    - pp-19 bizon
+    - PP-19 Bizon
+    category: smg
+    caliber: 9mm
+    material: BLAZE_ROD
+    ammo-id: ammo-9
+    base-damage: 39.9
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.6
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 700.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/PP-19%20Bizon%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 380.0
+  p90:
+    name: '&fP90'
+    aliases:
+    - p90
+    - P90
+    category: smg
+    caliber: '5.7'
+    material: BRUSH
+    ammo-id: ammo-57
+    base-damage: 36.75
+    falloff-start: 25.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.85
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    rpm: 1000.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: true
+    source-url: https://namu.wiki/w/P90%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 715.0
+  s1897:
+    name: '&fS1897'
+    aliases:
+    - s1897
+    - S1897
+    category: sg
+    caliber: 12g
+    material: SPYGLASS
+    ammo-id: ammo-12g
+    base-damage: 23.4
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.1235
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 109.0
+    cooldown-ticks: 11
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/S1897%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  s686:
+    name: '&fS686'
+    aliases:
+    - s686
+    - S686
+    category: sg
+    caliber: 12g
+    material: MACE
+    ammo-id: ammo-12g
+    base-damage: 23.4
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.1235
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 300.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/S686%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  s12k:
+    name: '&fS12K'
+    aliases:
+    - s12k
+    - S12K
+    category: sg
+    caliber: 12g
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-12g
+    base-damage: 20.7
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.1235
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 240.0
+    cooldown-ticks: 5
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/S12K%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  dbs:
+    name: '&fDBS'
+    aliases:
+    - dbs
+    - DBS
+    category: sg
+    caliber: 12g
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-12g
+    base-damage: 25.2
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.1235
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 480.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: true
+    source-url: https://namu.wiki/w/DBS%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  m1014:
+    name: '&fM1014'
+    aliases:
+    - m1014
+    - M1014
+    category: sg
+    caliber: 12g
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-12g
+    base-damage: 17.0
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.35
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 90
+    cooldown-ticks: 13
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/M1014%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  ns2000:
+    name: '&fNS2000'
+    aliases:
+    - ns2000
+    - NS2000
+    category: sg
+    caliber: 12g
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-12g
+    base-damage: 29.2222
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.35
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 80.0
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/NS2000%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  mp155-ultima:
+    name: '&fMP155 Ultima'
+    aliases:
+    - mp155 ultima
+    - MP155 Ultima
+    category: sg
+    caliber: 12g
+    material: BLAZE_ROD
+    ammo-id: ammo-12g
+    base-damage: 26.0
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.35
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 300.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/MP155%20Ultima%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 360.0
+  o12:
+    name: '&fO12'
+    aliases:
+    - o12
+    - O12
+    category: sg
+    caliber: slug
+    material: BRUSH
+    ammo-id: ammo-12g-slug
+    base-damage: 10.0
+    falloff-start: 12.0
+    max-range: 55.0
+    minimum-damage-multiplier: 0.0
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 5
+    rpm: 480.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/O12%28PUBG%3A%20BATTLEGROUNDS%29
+    pellets: 9
+    spread-degrees: 7.0
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 625.0
+  m249:
+    name: '&fM249'
+    aliases:
+    - m249
+    - M249
+    category: lmg
+    caliber: '5.56'
+    material: SPYGLASS
+    ammo-id: ammo-556
+    base-damage: 43.05
+    falloff-start: 60.0
+    max-range: 170.0
+    minimum-damage-multiplier: 0.7501
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 75
+    rpm: 800.0
+    cooldown-ticks: 2
+    fire-modes:
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M249%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 915.0
+  mg3:
+    name: '&fMG3'
+    aliases:
+    - mg3
+    - MG3
+    category: lmg
+    caliber: '7.62'
+    material: MACE
+    ammo-id: ammo-762
+    base-damage: 44.1
+    falloff-start: 60.0
+    max-range: 170.0
+    minimum-damage-multiplier: 0.8
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 75
+    rpm: 660.0
+    cooldown-ticks: 2
+    fire-modes:
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: true
+    source-url: https://namu.wiki/w/MG3%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 820.0
+  dp-28:
+    name: '&fDP-28'
+    aliases:
+    - dp-28
+    - DP-28
+    category: lmg
+    caliber: '7.62'
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 54.6
+    falloff-start: 60.0
+    max-range: 170.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 75
+    rpm: 550.0
+    cooldown-ticks: 2
+    fire-modes:
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/DP-28%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 840.0
+  m134-minigun:
+    name: '&fM134 Minigun'
+    aliases:
+    - m134 minigun
+    - M134 Minigun
+    category: lmg
+    caliber: '7.62'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 32.0
+    falloff-start: 60.0
+    max-range: 170.0
+    minimum-damage-multiplier: 0.58
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 100
+    rpm: 1200
+    cooldown-ticks: 1
+    fire-modes:
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/M134%20Minigun%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  mg5:
+    name: '&fMG5'
+    aliases:
+    - mg5
+    - MG5
+    category: lmg
+    caliber: '7.62'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 48.0
+    falloff-start: 60.0
+    max-range: 170.0
+    minimum-damage-multiplier: 0.8125
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 100
+    rpm: 720.0
+    cooldown-ticks: 2
+    fire-modes:
+    - auto
+    burst-size: 3
+    weight: 12
+    supply-only: false
+    source-url: https://namu.wiki/w/MG5%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+  crossbow:
+    name: '&f석궁'
+    aliases:
+    - crossbow
+    - 석궁
+    category: crossbow
+    caliber: bolt
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-bolt
+    base-damage: 147.0
+    falloff-start: 80.0
+    max-range: 180.0
+    minimum-damage-multiplier: 0.7993
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 35
+    cooldown-ticks: 34
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%84%9D%EA%B6%81%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 160.0
+  tactical-crossbow:
+    name: '&f전술 석궁'
+    aliases:
+    - tactical crossbow
+    - 전술 석궁
+    category: crossbow
+    caliber: bolt
+    material: BLAZE_ROD
+    ammo-id: ammo-bolt
+    base-damage: 102.0
+    falloff-start: 80.0
+    max-range: 180.0
+    minimum-damage-multiplier: 0.65
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 35
+    cooldown-ticks: 34
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%A0%84%EC%88%A0%20%EC%84%9D%EA%B6%81%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  panzerfaust:
+    name: '&f판처파우스트'
+    aliases:
+    - panzerfaust
+    - 판처파우스트
+    category: launcher
+    caliber: rocket
+    material: BRUSH
+    ammo-id: ammo-rocket
+    base-damage: 119.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%ED%8C%90%EC%B2%98%ED%8C%8C%EC%9A%B0%EC%8A%A4%ED%8A%B8%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+    bullet-speed-mps: 62.0
+  rpg-7:
+    name: '&fRPG-7'
+    aliases:
+    - rpg-7
+    - RPG-7
+    category: launcher
+    caliber: rocket
+    material: SPYGLASS
+    ammo-id: ammo-rocket
+    base-damage: 121.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/RPG-7%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  m3e1-a:
+    name: '&fM3E1-A'
+    aliases:
+    - m3e1-a
+    - M3E1-A
+    category: launcher
+    caliber: rocket
+    material: MACE
+    ammo-id: ammo-rocket
+    base-damage: 123.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/M3E1-A%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  at4-a:
+    name: '&fAT4-A'
+    aliases:
+    - at4-a
+    - AT4-A
+    category: launcher
+    caliber: rocket
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-rocket
+    base-damage: 120.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/AT4-A%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  m202-bazooka:
+    name: '&fM202 Bazooka'
+    aliases:
+    - m202 bazooka
+    - M202 Bazooka
+    category: launcher
+    caliber: rocket
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-rocket
+    base-damage: 119.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/M202%20Bazooka%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  mortar:
+    name: '&f박격포'
+    aliases:
+    - mortar
+    - 박격포
+    category: launcher
+    caliber: mortar
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-mortar
+    base-damage: 123.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%B0%95%EA%B2%A9%ED%8F%AC%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+    bullet-speed-mps: 40.0
+  m32-mgl:
+    name: '&fM32 MGL'
+    aliases:
+    - m32 mgl
+    - M32 MGL
+    category: launcher
+    caliber: grenade
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-40mm
+    base-damage: 117.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/M32%20MGL%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  m79:
+    name: '&fM79'
+    aliases:
+    - m79
+    - M79
+    category: launcher
+    caliber: grenade
+    material: BLAZE_ROD
+    ammo-id: ammo-40mm
+    base-damage: 117.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 0.75
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/M79%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  p92:
+    name: '&fP92'
+    aliases:
+    - p92
+    - P92
+    category: pistol
+    caliber: 9mm
+    material: BRUSH
+    ammo-id: ammo-9
+    base-damage: 34.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 600.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/P92%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 380.0
+  p18c:
+    name: '&fP18C'
+    aliases:
+    - p18c
+    - P18C
+    category: pistol
+    caliber: 9mm
+    material: SPYGLASS
+    ammo-id: ammo-9
+    base-damage: 23.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 1000.0
+    cooldown-ticks: 1
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/P18C%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 375.0
+  skorpion:
+    name: '&fSkorpion'
+    aliases:
+    - skorpion
+    - Skorpion
+    category: pistol
+    caliber: 9mm
+    material: MACE
+    ammo-id: ammo-9
+    base-damage: 41.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 400
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    - auto
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/Skorpion%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  dual-mp7:
+    name: '&fDual MP7'
+    aliases:
+    - dual mp7
+    - Dual MP7
+    category: pistol
+    caliber: 9mm
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-9
+    base-damage: 39.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 400
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/Dual%20MP7%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  deagle:
+    name: '&fDeagle'
+    aliases:
+    - deagle
+    - Deagle
+    category: pistol
+    caliber: '.45'
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-45
+    base-damage: 62.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.7
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 300.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/Deagle%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 450.0
+  p1911:
+    name: '&fP1911'
+    aliases:
+    - p1911
+    - P1911
+    category: pistol
+    caliber: '.45'
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-45
+    base-damage: 42.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.1
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 546.0
+    cooldown-ticks: 2
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/P1911%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 250.0
+  r45:
+    name: '&fR45'
+    aliases:
+    - r45
+    - R45
+    category: pistol
+    caliber: '.45'
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-45
+    base-damage: 65.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.65
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 250.0
+    cooldown-ticks: 5
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/R45%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 330.0
+  r1895:
+    name: '&fR1895'
+    aliases:
+    - r1895
+    - R1895
+    category: pistol
+    caliber: '7.62'
+    material: BLAZE_ROD
+    ammo-id: ammo-762
+    base-damage: 64.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.65
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 300.0
+    cooldown-ticks: 4
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/R1895%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: namuwiki-pc-table
+    bullet-speed-mps: 330.0
+  sawed-off:
+    name: '&f소드오프'
+    aliases:
+    - sawed-off
+    - 소드오프
+    category: pistol
+    caliber: 12g
+    material: BRUSH
+    ammo-id: ammo-12g
+    base-damage: 41.0
+    falloff-start: 30.0
+    max-range: 90.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 15
+    rpm: 400
+    cooldown-ticks: 3
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%86%8C%EB%93%9C%EC%98%A4%ED%94%84%28PUBG%3A%20BATTLEGROUNDS%29
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  flare-gun:
+    name: '&f플레어건'
+    aliases:
+    - flare gun
+    - 플레어건
+    category: flare
+    caliber: flare
+    material: SPYGLASS
+    ammo-id: ammo-flare
+    base-damage: 0.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%ED%94%8C%EB%A0%88%EC%96%B4%EA%B1%B4%28PUBG%3A%20BATTLEGROUNDS%29
+    effect: flare
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  green-flare-gun:
+    name: '&f그린 플레어건'
+    aliases:
+    - green flare gun
+    - 그린 플레어건
+    category: flare
+    caliber: flare
+    material: MACE
+    ammo-id: ammo-flare
+    base-damage: 0.0
+    falloff-start: 10.0
+    max-range: 100.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EA%B7%B8%EB%A6%B0%20%ED%94%8C%EB%A0%88%EC%96%B4%EA%B1%B4%28PUBG%3A%20BATTLEGROUNDS%29
+    effect: flare
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  sickle:
+    name: '&f낫'
+    aliases:
+    - sickle
+    - 낫
+    category: melee
+    caliber: none
+    material: IRON_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 43.0
+    falloff-start: 3.0
+    max-range: 4.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 80
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%82%AB%28PUBG%3A%20BATTLEGROUNDS%29
+    melee: true
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  machete:
+    name: '&f마체테'
+    aliases:
+    - machete
+    - 마체테
+    category: melee
+    caliber: none
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 44.0
+    falloff-start: 3.0
+    max-range: 4.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 80
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%A7%88%EC%B2%B4%ED%85%8C%28PUBG%3A%20BATTLEGROUNDS%29
+    melee: true
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  crowbar:
+    name: '&f쇠지렛대'
+    aliases:
+    - crowbar
+    - 쇠지렛대
+    category: melee
+    caliber: none
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 48.0
+    falloff-start: 3.0
+    max-range: 4.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 80
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%87%A0%EC%A7%80%EB%A0%9B%EB%8C%80%28PUBG%3A%20BATTLEGROUNDS%29
+    melee: true
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  pickaxe:
+    name: '&f곡괭이'
+    aliases:
+    - pickaxe
+    - 곡괭이
+    category: melee
+    caliber: none
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 44.0
+    falloff-start: 3.0
+    max-range: 4.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 80
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EA%B3%A1%EA%B4%AD%EC%9D%B4%28PUBG%3A%20BATTLEGROUNDS%29
+    melee: true
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  frying-pan:
+    name: '&f프라이팬'
+    aliases:
+    - frying pan
+    - 프라이팬
+    category: melee
+    caliber: none
+    material: BLAZE_ROD
+    ammo-id: none
+    base-damage: 60.0
+    falloff-start: 3.0
+    max-range: 4.0
+    minimum-damage-multiplier: 1.0
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 80
+    cooldown-ticks: 15
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%ED%94%84%EB%9D%BC%EC%9D%B4%ED%8C%AC%28PUBG%3A%20BATTLEGROUNDS%29
+    melee: true
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  frag-grenade:
+    name: '&f세열수류탄'
+    aliases:
+    - frag grenade
+    - 세열수류탄
+    category: throwable
+    caliber: none
+    material: BRUSH
+    ammo-id: none
+    base-damage: 101.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%84%B8%EC%97%B4%EC%88%98%EB%A5%98%ED%83%84%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  smoke-grenade:
+    name: '&f연막탄'
+    aliases:
+    - smoke grenade
+    - 연막탄
+    category: throwable
+    caliber: none
+    material: SPYGLASS
+    ammo-id: none
+    base-damage: 0.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%97%B0%EB%A7%89%ED%83%84%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 8.0
+    fuse-ticks: 60
+    effect: smoke
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  stun-grenade:
+    name: '&f섬광탄'
+    aliases:
+    - stun grenade
+    - 섬광탄
+    category: throwable
+    caliber: none
+    material: MACE
+    ammo-id: none
+    base-damage: 0.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%84%AC%EA%B4%91%ED%83%84%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    effect: flash
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  molotov-cocktail:
+    name: '&f화염병'
+    aliases:
+    - molotov cocktail
+    - 화염병
+    category: throwable
+    caliber: none
+    material: IRON_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 25.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%ED%99%94%EC%97%BC%EB%B3%91%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    effect: fire
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  sticky-bomb:
+    name: '&f점착폭탄'
+    aliases:
+    - sticky bomb
+    - 점착폭탄
+    category: throwable
+    caliber: none
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 101.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EC%A0%90%EC%B0%A9%ED%8F%AD%ED%83%84%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  bluezone-grenade:
+    name: '&f블루존 수류탄'
+    aliases:
+    - bluezone grenade
+    - 블루존 수류탄
+    category: throwable
+    caliber: none
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 15.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/%EB%B8%94%EB%A3%A8%EC%A1%B4%20%EC%88%98%EB%A5%98%ED%83%84%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    effect: bluezone
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
+  c4:
+    name: '&fC4'
+    aliases:
+    - c4
+    - C4
+    category: throwable
+    caliber: none
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: none
+    base-damage: 97.0
+    falloff-start: 4.0
+    max-range: 35.0
+    minimum-damage-multiplier: 0.5
+    head-multiplier: 1.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 1
+    rpm: 20
+    cooldown-ticks: 60
+    fire-modes:
+    - single
+    burst-size: 3
+    weight: 7
+    supply-only: false
+    source-url: https://namu.wiki/w/C4%28PUBG%3A%20BATTLEGROUNDS%29
+    explosive-radius: 6.0
+    fuse-ticks: 60
+    source-checked-at: '2026-07-11'
+    balance-source: category-fallback
 ammo:
-  ammo-556: {name: "&a5.56mm 탄약", material: PRISMARINE_SHARD}
-  ammo-762: {name: "&67.62mm 탄약", material: FLINT}
-  ammo-45: {name: "&e.45 ACP 탄약", material: IRON_NUGGET}
+  ammo-556:
+    name: '&a5.56mm 탄약'
+    material: PRISMARINE_SHARD
+  ammo-762:
+    name: '&67.62mm 탄약'
+    material: FLINT
+  ammo-45:
+    name: '&e.45 ACP 탄약'
+    material: IRON_NUGGET
+  ammo-9:
+    name: '&e9mm 탄약'
+    material: GOLD_NUGGET
+    weight: 0.375
+  ammo-57:
+    name: '&e5.7mm 탄약'
+    material: COPPER_INGOT
+    weight: 0.4
+  ammo-300:
+    name: '&e.300 매그넘'
+    material: AMETHYST_SHARD
+    weight: 1
+  ammo-50:
+    name: '&e.50 BMG'
+    material: NETHERITE_SCRAP
+    weight: 2
+  ammo-12g:
+    name: '&e12게이지'
+    material: FIREWORK_STAR
+    weight: 1.25
+  ammo-12g-slug:
+    name: '&e12게이지 슬러그'
+    material: FIRE_CHARGE
+    weight: 1.25
+  ammo-bolt:
+    name: '&e석궁용 화살'
+    material: ARROW
+    weight: 2
+  ammo-rocket:
+    name: '&e로켓 탄두'
+    material: TNT
+    weight: 20
+  ammo-mortar:
+    name: '&e60mm 박격포탄'
+    material: HEAVY_CORE
+    weight: 12
+  ammo-40mm:
+    name: '&e40mm 유탄'
+    material: SNOWBALL
+    weight: 8
+  ammo-flare:
+    name: '&e신호탄'
+    material: FIREWORK_ROCKET
+    weight: 5
 healing:
   bandage:
-    name: "&f붕대"
+    name: '&f붕대'
     material: PAPER
     heal: 12.0
     cap: 75.0
     use-seconds: 3
     weight: 2
   first-aid:
-    name: "&c구급상자"
+    name: '&c구급상자'
     material: RED_DYE
     heal-to: 75.0
     cap: 75.0
@@ -79,63 +2705,203 @@ healing:
     apply-seconds: 2
     weight: 10
   med-kit:
-    name: "&d의료용 키트"
+    name: '&d의료용 키트'
     material: MAGENTA_DYE
     heal-to: 100.0
     cap: 100.0
     use-seconds: 6
     weight: 15
 armor:
-  helmet-1: {name: "&f1레벨 헬멧", material: LEATHER_HELMET, slot: HEAD, reduction: 0.30, durability: 100.0, weight: 0}
-  helmet-2: {name: "&a2레벨 헬멧", material: IRON_HELMET, slot: HEAD, reduction: 0.40, durability: 100.0, weight: 0}
-  helmet-3: {name: "&b3레벨 헬멧", material: DIAMOND_HELMET, slot: HEAD, reduction: 0.55, durability: 100.0, weight: 0, supply-only: true}
-  vest-1: {name: "&f1레벨 조끼", material: LEATHER_CHESTPLATE, slot: CHEST, reduction: 0.30, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
-  vest-2: {name: "&a2레벨 조끼", material: IRON_CHESTPLATE, slot: CHEST, reduction: 0.40, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
-  vest-3: {name: "&b3레벨 조끼", material: DIAMOND_CHESTPLATE, slot: CHEST, reduction: 0.55, durability: 100.0, capacity: 50, broken-reduction: 0.20, weight: 0}
-
-
+  helmet-1:
+    name: '&f1레벨 헬멧'
+    material: LEATHER_HELMET
+    slot: HEAD
+    reduction: 0.3
+    durability: 100.0
+    weight: 0
+  helmet-2:
+    name: '&a2레벨 헬멧'
+    material: IRON_HELMET
+    slot: HEAD
+    reduction: 0.4
+    durability: 100.0
+    weight: 0
+  helmet-3:
+    name: '&b3레벨 헬멧'
+    material: DIAMOND_HELMET
+    slot: HEAD
+    reduction: 0.55
+    durability: 100.0
+    weight: 0
+    supply-only: true
+  vest-1:
+    name: '&f1레벨 조끼'
+    material: LEATHER_CHESTPLATE
+    slot: CHEST
+    reduction: 0.3
+    durability: 100.0
+    capacity: 50
+    broken-reduction: 0.2
+    weight: 0
+  vest-2:
+    name: '&a2레벨 조끼'
+    material: IRON_CHESTPLATE
+    slot: CHEST
+    reduction: 0.4
+    durability: 100.0
+    capacity: 50
+    broken-reduction: 0.2
+    weight: 0
+  vest-3:
+    name: '&b3레벨 조끼'
+    material: DIAMOND_CHESTPLATE
+    slot: CHEST
+    reduction: 0.55
+    durability: 100.0
+    capacity: 50
+    broken-reduction: 0.2
+    weight: 0
 boosters:
   energy-drink:
-    name: "&b에너지 드링크"
+    name: '&b에너지 드링크'
     material: HONEY_BOTTLE
     boost: 40
     use-seconds: 4
     weight: 4
   painkiller:
-    name: "&f진통제"
+    name: '&f진통제'
     material: SUGAR
     boost: 60
     use-seconds: 6
     weight: 6
   adrenaline:
-    name: "&d아드레날린 주사기"
+    name: '&d아드레날린 주사기'
     material: BREEZE_ROD
     boost: 100
     use-seconds: 6
     weight: 10
 backpacks:
-  backpack-1: {name: "&f1레벨 배낭", material: BUNDLE, capacity: 150, weight: 0}
-  backpack-2: {name: "&a2레벨 배낭", material: GREEN_BUNDLE, capacity: 200, weight: 0}
-  backpack-3: {name: "&b3레벨 배낭", material: BLUE_BUNDLE, capacity: 250, weight: 0}
-  jammer-backpack: {name: "&95전파 방해 배낭", material: BLACK_BUNDLE, capacity: 200, energy: 100, weight: 0}
+  backpack-1:
+    name: '&f1레벨 배낭'
+    material: BUNDLE
+    capacity: 150
+    weight: 0
+  backpack-2:
+    name: '&a2레벨 배낭'
+    material: GREEN_BUNDLE
+    capacity: 200
+    weight: 0
+  backpack-3:
+    name: '&b3레벨 배낭'
+    material: BLUE_BUNDLE
+    capacity: 250
+    weight: 0
+  jammer-backpack:
+    name: '&95전파 방해 배낭'
+    material: BLACK_BUNDLE
+    capacity: 200
+    energy: 100
+    weight: 0
 special:
-  frying-pan: {name: "&8프라이팬", material: IRON_SHOVEL, bullet-block: true, weight: 4}
-  tactical-pack: {name: "&6전술 가방", material: ORANGE_BUNDLE, storage-slots: 4, weight: 20}
-  emt-gear: {name: "&c응급 처치 장비", material: WHITE_BUNDLE, revive-seconds: 8, healing-speed-multiplier: 0.75, weight: 20}
-  all-in-one-repair-kit: {name: "&e올인원 수리 키트", material: ANVIL, use-seconds: 3, repair-armor: true, weight: 20}
-  parachute: {name: "&f낙하산", material: FEATHER, reusable: true, minimum-fall-blocks: 6, slow-falling-seconds: 12, weight: 0}
-  ghillie-green: {name: "&2길리 슈트", material: MOSS_BLOCK, camouflage: green, weight: 10}
-  ghillie-snow: {name: "&f설원 길리 슈트", material: SNOW_BLOCK, camouflage: snow, weight: 10}
-  ghillie-desert: {name: "&6사막 길리 슈트", material: SAND, camouflage: desert, weight: 10}
-  hemostatic-device: {name: "&c응급 지혈 주사", material: REDSTONE_TORCH, revive-seconds: 1, weight: 5}
-  self-aed: {name: "&e자가제세동기", material: RECOVERY_COMPASS, revive-seconds: 10, revive-health: 10, consume-on-start: true, weight: 15}
-  combat-ready-kit: {name: "&d전투 준비 키트", material: ENCHANTED_GOLDEN_APPLE, use-seconds: 7, heal-to: 100, boost: 100, weight: 20}
-  jerry-can: {name: "&c연료통", material: LAVA_BUCKET, use-seconds: 3, fuel-min: 35, fuel-max: 90, durability: 200, weight: 20}
-  emergency-pickup: {name: "&b비상 호출", material: LEAD, deploy-seconds: 60, capacity: 4, weight: 50}
-  folding-shield: {name: "&7접이식 방패", material: HEAVY_WEIGHTED_PRESSURE_PLATE, deploy-seconds: 1.5, durability: 1800, weight: 30}
-  bluechip: {name: "&b블루칩", material: ECHO_SHARD, weight: 5}
-  bluechip-transmitter: {name: "&3블루칩 송신기", material: END_CRYSTAL, base-seconds: 10, per-extra-seconds: 5, weight: 20}
-  bluezone-uplink: {name: "&9블루존 유도기", material: HEART_OF_THE_SEA, use-seconds: 15, sandbox-only: true, weight: 30}
+  frying-pan:
+    name: '&8프라이팬'
+    material: IRON_SHOVEL
+    bullet-block: true
+    weight: 4
+  tactical-pack:
+    name: '&6전술 가방'
+    material: ORANGE_BUNDLE
+    storage-slots: 4
+    weight: 20
+  emt-gear:
+    name: '&c응급 처치 장비'
+    material: WHITE_BUNDLE
+    revive-seconds: 8
+    healing-speed-multiplier: 0.75
+    weight: 20
+  all-in-one-repair-kit:
+    name: '&e올인원 수리 키트'
+    material: ANVIL
+    use-seconds: 3
+    repair-armor: true
+    weight: 20
+  parachute:
+    name: '&f낙하산'
+    material: FEATHER
+    reusable: true
+    minimum-fall-blocks: 6
+    slow-falling-seconds: 12
+    weight: 0
+  ghillie-green:
+    name: '&2길리 슈트'
+    material: MOSS_BLOCK
+    camouflage: green
+    weight: 10
+  ghillie-snow:
+    name: '&f설원 길리 슈트'
+    material: SNOW_BLOCK
+    camouflage: snow
+    weight: 10
+  ghillie-desert:
+    name: '&6사막 길리 슈트'
+    material: SAND
+    camouflage: desert
+    weight: 10
+  hemostatic-device:
+    name: '&c응급 지혈 주사'
+    material: REDSTONE_TORCH
+    revive-seconds: 1
+    weight: 5
+  self-aed:
+    name: '&e자가제세동기'
+    material: RECOVERY_COMPASS
+    revive-seconds: 10
+    revive-health: 10
+    consume-on-start: true
+    weight: 15
+  combat-ready-kit:
+    name: '&d전투 준비 키트'
+    material: ENCHANTED_GOLDEN_APPLE
+    use-seconds: 7
+    heal-to: 100
+    boost: 100
+    weight: 20
+  jerry-can:
+    name: '&c연료통'
+    material: LAVA_BUCKET
+    use-seconds: 3
+    fuel-min: 35
+    fuel-max: 90
+    durability: 200
+    weight: 20
+  emergency-pickup:
+    name: '&b비상 호출'
+    material: LEAD
+    deploy-seconds: 60
+    capacity: 4
+    weight: 50
+  folding-shield:
+    name: '&7접이식 방패'
+    material: HEAVY_WEIGHTED_PRESSURE_PLATE
+    deploy-seconds: 1.5
+    durability: 1800
+    weight: 30
+  bluechip:
+    name: '&b블루칩'
+    material: ECHO_SHARD
+    weight: 5
+  bluechip-transmitter:
+    name: '&3블루칩 송신기'
+    material: END_CRYSTAL
+    base-seconds: 10
+    per-extra-seconds: 5
+    weight: 20
+  bluezone-uplink:
+    name: '&9블루존 유도기'
+    material: HEART_OF_THE_SEA
+    use-seconds: 15
+    sandbox-only: true
+    weight: 30
 capacity:
   base: 50
   enforce-on-pickup: true

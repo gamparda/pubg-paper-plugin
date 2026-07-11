@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.combat; public record ShotOffset(double yawDegrees,double pitchDegrees){}
