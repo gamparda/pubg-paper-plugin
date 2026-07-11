@@ -1,0 +1,86 @@
+schema-version: 1
+combat:
+  friendly-fire: false
+  head-threshold: 0.72
+  empty-click-sound: BLOCK_LEVER_CLICK
+  hit-particle: CRIT
+weapons:
+  akm:
+    name: "&6AKM"
+    material: IRON_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 24.0
+    falloff-start: 45.0
+    max-range: 120.0
+    minimum-damage-multiplier: 0.55
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    cooldown-ticks: 3
+  m416:
+    name: "&eM416"
+    material: DIAMOND_HORSE_ARMOR
+    ammo-id: ammo-556
+    base-damage: 21.0
+    falloff-start: 55.0
+    max-range: 135.0
+    minimum-damage-multiplier: 0.60
+    head-multiplier: 2.0
+    body-multiplier: 1.0
+    limb-multiplier: 0.75
+    magazine: 30
+    cooldown-ticks: 2
+  kar98k:
+    name: "&cKar98k"
+    material: GOLDEN_HORSE_ARMOR
+    ammo-id: ammo-762
+    base-damage: 42.0
+    falloff-start: 100.0
+    max-range: 220.0
+    minimum-damage-multiplier: 0.65
+    head-multiplier: 2.25
+    body-multiplier: 1.0
+    limb-multiplier: 0.70
+    magazine: 5
+    cooldown-ticks: 24
+  ump45:
+    name: "&aUMP45"
+    material: LEATHER_HORSE_ARMOR
+    ammo-id: ammo-45
+    base-damage: 18.0
+    falloff-start: 25.0
+    max-range: 75.0
+    minimum-damage-multiplier: 0.45
+    head-multiplier: 1.8
+    body-multiplier: 1.0
+    limb-multiplier: 0.8
+    magazine: 25
+    cooldown-ticks: 2
+ammo:
+  ammo-556: {name: "&a5.56mm 탄약", material: PRISMARINE_SHARD}
+  ammo-762: {name: "&67.62mm 탄약", material: FLINT}
+  ammo-45: {name: "&e.45 ACP 탄약", material: IRON_NUGGET}
+healing:
+  bandage:
+    name: "&f붕대"
+    material: PAPER
+    heal: 10.0
+    cap: 75.0
+  first-aid:
+    name: "&c구급상자"
+    material: RED_DYE
+    heal: 75.0
+    cap: 75.0
+  med-kit:
+    name: "&d의료용 키트"
+    material: MAGENTA_DYE
+    heal: 100.0
+    cap: 100.0
+armor:
+  helmet-1: {name: "&f1레벨 헬멧", material: LEATHER_HELMET, slot: HEAD, reduction: 0.20, durability: 80.0}
+  helmet-2: {name: "&a2레벨 헬멧", material: IRON_HELMET, slot: HEAD, reduction: 0.40, durability: 150.0}
+  helmet-3: {name: "&b3레벨 헬멧", material: DIAMOND_HELMET, slot: HEAD, reduction: 0.55, durability: 230.0}
+  vest-1: {name: "&f1레벨 조끼", material: LEATHER_CHESTPLATE, slot: CHEST, reduction: 0.20, durability: 100.0}
+  vest-2: {name: "&a2레벨 조끼", material: IRON_CHESTPLATE, slot: CHEST, reduction: 0.40, durability: 180.0}
+  vest-3: {name: "&b3레벨 조끼", material: DIAMOND_CHESTPLATE, slot: CHEST, reduction: 0.55, durability: 260.0}

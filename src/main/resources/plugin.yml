@@ -1,0 +1,15 @@
+name: Battlegrounds
+version: ${project.version}
+main: kr.gampa.battlegrounds.BattlegroundsPlugin
+api-version: '1.21'
+author: gampa
+description: Map-independent PUBG-style item and combat systems for Paper 26.2
+commands:
+  battlegrounds:
+    aliases: [bg]
+    description: Battlegrounds administration
+    usage: /bg <give|reload|status>
+permissions:
+  battlegrounds.admin:
+    default: op
+    description: Manage Battlegrounds
