@@ -5,6 +5,7 @@ combat:
   head-threshold: 0.72
   empty-click-sound: BLOCK_LEVER_CLICK
   hit-particle: CRIT
+  right-click-release-grace-ticks: 6
 weapons:
   akm:
     name: '&fAKM'
@@ -158,7 +159,7 @@ weapons:
     - AK ALFA
     category: ar
     caliber: '7.62'
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-762
     base-damage: 46.0
     falloff-start: 55.0
@@ -186,7 +187,7 @@ weapons:
     - Honey Badger
     category: ar
     caliber: '7.62'
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-762
     base-damage: 42.0
     falloff-start: 55.0
@@ -388,7 +389,7 @@ weapons:
     - K2
     category: ar
     caliber: '5.56'
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-556
     base-damage: 41.0
     falloff-start: 55.0
@@ -417,7 +418,7 @@ weapons:
     - FAMAS
     category: ar
     caliber: '5.56'
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-556
     base-damage: 39.0
     falloff-start: 55.0
@@ -614,7 +615,7 @@ weapons:
     - QBU
     category: dmr
     caliber: '5.56'
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-556
     base-damage: 44.1
     falloff-start: 90.0
@@ -642,7 +643,7 @@ weapons:
     - SKS
     category: dmr
     caliber: '7.62'
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-762
     base-damage: 49.35
     falloff-start: 90.0
@@ -838,7 +839,7 @@ weapons:
     - Kar98k
     category: sr
     caliber: '7.62'
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-762
     base-damage: 102.7
     falloff-start: 120.0
@@ -866,7 +867,7 @@ weapons:
     - M24
     category: sr
     caliber: '7.62'
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-762
     base-damage: 97.5
     falloff-start: 120.0
@@ -1060,7 +1061,7 @@ weapons:
     - 마이크로 UZI
     category: smg
     caliber: 9mm
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-9
     base-damage: 27.3
     falloff-start: 25.0
@@ -1089,7 +1090,7 @@ weapons:
     - UMP45
     category: smg
     caliber: 9mm
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-9
     base-damage: 42.0
     falloff-start: 25.0
@@ -1292,7 +1293,7 @@ weapons:
     - P90
     category: smg
     caliber: '5.7'
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-57
     base-damage: 36.75
     falloff-start: 25.0
@@ -1321,7 +1322,7 @@ weapons:
     - S1897
     category: sg
     caliber: 12g
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-12g
     base-damage: 23.4
     falloff-start: 12.0
@@ -1530,7 +1531,7 @@ weapons:
     - O12
     category: sg
     caliber: slug
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-12g-slug
     base-damage: 10.0
     falloff-start: 12.0
@@ -1560,7 +1561,7 @@ weapons:
     - M249
     category: lmg
     caliber: '5.56'
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-556
     base-damage: 43.05
     falloff-start: 60.0
@@ -1753,7 +1754,7 @@ weapons:
     - 판처파우스트
     category: launcher
     caliber: rocket
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-rocket
     base-damage: 119.0
     falloff-start: 10.0
@@ -1783,7 +1784,7 @@ weapons:
     - RPG-7
     category: launcher
     caliber: rocket
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-rocket
     base-damage: 121.0
     falloff-start: 10.0
@@ -1987,7 +1988,7 @@ weapons:
     - P92
     category: pistol
     caliber: 9mm
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-9
     base-damage: 34.0
     falloff-start: 30.0
@@ -2015,7 +2016,7 @@ weapons:
     - P18C
     category: pistol
     caliber: 9mm
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-9
     base-damage: 23.0
     falloff-start: 30.0
@@ -2211,7 +2212,7 @@ weapons:
     - 소드오프
     category: pistol
     caliber: 12g
-    material: BRUSH
+    material: MACE
     ammo-id: ammo-12g
     base-damage: 41.0
     falloff-start: 30.0
@@ -2238,7 +2239,7 @@ weapons:
     - 플레어건
     category: flare
     caliber: flare
-    material: SPYGLASS
+    material: STICK
     ammo-id: ammo-flare
     base-damage: 0.0
     falloff-start: 10.0
@@ -2434,7 +2435,7 @@ weapons:
     - 세열수류탄
     category: throwable
     caliber: none
-    material: BRUSH
+    material: MACE
     ammo-id: none
     base-damage: 101.0
     falloff-start: 4.0
@@ -2463,7 +2464,7 @@ weapons:
     - 연막탄
     category: throwable
     caliber: none
-    material: SPYGLASS
+    material: STICK
     ammo-id: none
     base-damage: 0.0
     falloff-start: 4.0

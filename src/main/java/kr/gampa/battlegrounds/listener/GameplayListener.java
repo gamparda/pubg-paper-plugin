@@ -12,6 +12,7 @@ import org.bukkit.entity.*;
 import org.bukkit.event.*;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.*;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
@@ -19,22 +20,30 @@ import org.bukkit.potion.*;
 import org.bukkit.util.*;
 
 public final class GameplayListener implements Listener {
-  private final BattlegroundsPlugin plugin; private final ItemRegistry items; private final PlayerSystemManager systems; private final DamageCalculator calculator=new DamageCalculator(); private final Map<UUID,Map<String,Long>> cooldowns=new HashMap<>();
-  public GameplayListener(BattlegroundsPlugin plugin,ItemRegistry items,PlayerSystemManager systems){this.plugin=plugin;this.items=items;this.systems=systems;}
+  private final BattlegroundsPlugin plugin; private final ItemRegistry items; private final PlayerSystemManager systems; private final DamageCalculator calculator=new DamageCalculator(); private final Map<UUID,FireControl> fireControls=new HashMap<>(); private final Map<UUID,String> controlledWeapon=new HashMap<>(); private final Map<UUID,Integer> controlledSlot=new HashMap<>();
+  public GameplayListener(BattlegroundsPlugin plugin,ItemRegistry items,PlayerSystemManager systems){this.plugin=plugin;this.items=items;this.systems=systems;Bukkit.getScheduler().runTaskTimer(plugin,this::tickAutomaticWeapons,1,1);}
 
   @EventHandler(priority=EventPriority.HIGH)
   public void onInteract(PlayerInteractEvent event){
     if(event.getHand()!=EquipmentSlot.HAND)return;ItemStack held=event.getItem();String id=items.itemId(held);if(id==null)return;String category=items.category(id);
     if(event.getAction().isRightClick()){
-      if("weapon".equals(category)){event.setCancelled(true);trigger(event.getPlayer(),held,id);}
+      if("weapon".equals(category)){event.setCancelled(true);signalTrigger(event.getPlayer(),held,id);}
       else if(!"ammo".equals(category)&&!"armor".equals(category)){event.setCancelled(true);systems.use(event.getPlayer(),held,id);}
     }else if(event.getAction().isLeftClick()&&"weapon".equals(category)){event.setCancelled(true);if(event.getPlayer().isSneaking())cycleMode(event.getPlayer(),held,id);else reload(event.getPlayer(),held,id);}
   }
 
-  private void trigger(Player shooter,ItemStack gun,String id){
-    ConfigurationSection c=items.definition(id);long now=System.currentTimeMillis(),ready=cooldowns.computeIfAbsent(shooter.getUniqueId(),k->new HashMap<>()).getOrDefault(id,0L);if(now<ready)return;String mode=gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.fireModeKey(),PersistentDataType.STRING,"single");int rounds=gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.roundsKey(),PersistentDataType.INTEGER,0);int shots=WeaponMechanics.shotsForTrigger(mode,c.getInt("burst-size",3),rounds);if(shots<=0){shootOnce(shooter,gun,id);return;}int interval=c.getInt("burst-interval-ticks",2),slot=shooter.getInventory().getHeldItemSlot();cooldowns.get(shooter.getUniqueId()).put(id,now+Math.max(c.getInt("cooldown-ticks",3),shots*interval)*50L);
+  private void signalTrigger(Player shooter,ItemStack gun,String id){
+    ConfigurationSection c=items.definition(id);UUID uuid=shooter.getUniqueId();if(!id.equals(controlledWeapon.get(uuid))){fireControls.put(uuid,new FireControl(plugin.getConfig().getInt("combat.right-click-release-grace-ticks",6)));controlledWeapon.put(uuid,id);}controlledSlot.put(uuid,shooter.getInventory().getHeldItemSlot());String mode=gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.fireModeKey(),PersistentDataType.STRING,"single");if(fireControls.get(uuid).signal(mode,Bukkit.getCurrentTick(),c.getInt("cooldown-ticks",3),c.getDouble("rpm",600))){if("auto".equals(mode))shootOnce(shooter,gun,id);else triggerBurst(shooter,gun,id,mode);}
+  }
+
+  private void triggerBurst(Player shooter,ItemStack gun,String id,String mode){
+    ConfigurationSection c=items.definition(id);int rounds=gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.roundsKey(),PersistentDataType.INTEGER,0);int shots=WeaponMechanics.shotsForTrigger(mode,c.getInt("burst-size",3),rounds);if(shots<=0){shootOnce(shooter,gun,id);return;}int interval=c.getInt("burst-interval-ticks",2),slot=shooter.getInventory().getHeldItemSlot();
     for(int i=0;i<shots;i++){int delay=i*interval;Bukkit.getScheduler().runTaskLater(plugin,()->{if(shooter.getInventory().getHeldItemSlot()==slot&&id.equals(items.itemId(shooter.getInventory().getItemInMainHand())))shootOnce(shooter,shooter.getInventory().getItemInMainHand(),id);},delay);}
   }
+
+  private void tickAutomaticWeapons(){long tick=Bukkit.getCurrentTick();for(Player shooter:Bukkit.getOnlinePlayers()){UUID uuid=shooter.getUniqueId();FireControl control=fireControls.get(uuid);String id=controlledWeapon.get(uuid);if(control==null||id==null||controlledSlot.getOrDefault(uuid,-1)!=shooter.getInventory().getHeldItemSlot())continue;ItemStack gun=shooter.getInventory().getItemInMainHand();if(!id.equals(items.itemId(gun)))continue;String mode=gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.fireModeKey(),PersistentDataType.STRING,"single");if(!"auto".equals(mode)||gun.getItemMeta().getPersistentDataContainer().getOrDefault(plugin.roundsKey(),PersistentDataType.INTEGER,0)<=0)continue;ConfigurationSection c=items.definition(id);if(control.tickAutomatic(tick,c.getDouble("rpm",600)))shootOnce(shooter,gun,id);}}
+
+  @EventHandler public void quit(PlayerQuitEvent event){UUID uuid=event.getPlayer().getUniqueId();fireControls.remove(uuid);controlledWeapon.remove(uuid);controlledSlot.remove(uuid);}
 
   private void shootOnce(Player shooter,ItemStack gun,String id){
     if(!id.equals(items.itemId(gun))||!shooter.isOnline())return;ConfigurationSection c=items.definition(id);boolean melee=c.getBoolean("melee");ItemMeta meta=gun.getItemMeta();int rounds=meta.getPersistentDataContainer().getOrDefault(plugin.roundsKey(),PersistentDataType.INTEGER,0);

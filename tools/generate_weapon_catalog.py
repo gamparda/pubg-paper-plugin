@@ -35,7 +35,7 @@ profiles={
 'PISTOL':(38,30,90,.5,400,15,['single']), 'FLARE':(0,10,100,1,20,1,['single']),
 'MELEE':(45,3,4,1,80,1,['single']), 'THROWABLE':(100,4,35,.5,20,1,['single'])}
 ammo_map={'5.56':'ammo-556','7.62':'ammo-762','9mm':'ammo-9','5.7':'ammo-57','.300':'ammo-300','.45':'ammo-45','.50':'ammo-50','12g':'ammo-12g','slug':'ammo-12g-slug','bolt':'ammo-bolt','rocket':'ammo-rocket','mortar':'ammo-mortar','grenade':'ammo-40mm','flare':'ammo-flare','none':'none'}
-materials=['IRON_HORSE_ARMOR','GOLDEN_HORSE_ARMOR','DIAMOND_HORSE_ARMOR','LEATHER_HORSE_ARMOR','BLAZE_ROD','BRUSH','SPYGLASS','MACE']
+materials=['IRON_HORSE_ARMOR','GOLDEN_HORSE_ARMOR','DIAMOND_HORSE_ARMOR','LEATHER_HORSE_ARMOR','BLAZE_ROD','MACE','STICK','BREEZE_ROD']
 weapons={}; idx=0
 for group,names in G.items():
  typ,cal=group.split(' ',1); base,fall,rng,minmul,rpm,mag,modes=profiles[typ]
