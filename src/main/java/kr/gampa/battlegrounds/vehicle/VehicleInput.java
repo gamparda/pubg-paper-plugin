@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.vehicle; public record VehicleInput(double throttle,double steering,boolean boost,boolean brake){public VehicleInput{throttle=Math.max(-1,Math.min(1,throttle));steering=Math.max(-1,Math.min(1,steering));}}

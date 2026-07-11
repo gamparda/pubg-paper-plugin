@@ -1,0 +1,1 @@
+package kr.gampa.battlegrounds.vehicle; public enum VehicleType { LAND, WATER, AMPHIBIOUS, AIR }

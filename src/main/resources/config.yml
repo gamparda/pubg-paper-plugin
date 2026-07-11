@@ -2915,3 +2915,427 @@ consumables:
   movement-radius: 2.0
   cancel-on-damage: true
   cancel-on-item-switch: true
+vehicles:
+  motorcycle:
+    name: 모터사이클
+    type: LAND
+    top-speed-kmh: 152
+    reverse-speed-kmh: 60
+    boost-multiplier: 1.15
+    turn-rate-deg: 95
+    seats: 2
+    durability: 1000
+    fuel-capacity: 100
+    acceleration: 0.095
+    fuel-per-second: 0.02
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: BLACK_CONCRETE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  scooter:
+    name: 스쿠터
+    type: LAND
+    top-speed-kmh: 90
+    reverse-speed-kmh: 35
+    boost-multiplier: 1.15
+    turn-rate-deg: 75
+    seats: 2
+    durability: 1000
+    fuel-capacity: 100
+    acceleration: 0.07
+    fuel-per-second: 0.017
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: LIGHT_BLUE_CONCRETE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  tukshai:
+    name: 툭샤이
+    type: LAND
+    top-speed-kmh: 85
+    reverse-speed-kmh: 30
+    boost-multiplier: 1.15
+    turn-rate-deg: 52
+    seats: 3
+    durability: 1200
+    fuel-capacity: 100
+    acceleration: 0.05
+    fuel-per-second: 0.02
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: YELLOW_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  mountain-bike:
+    name: 산악 자전거
+    type: LAND
+    top-speed-kmh: 62
+    reverse-speed-kmh: 25
+    boost-multiplier: 1.15
+    turn-rate-deg: 100
+    seats: 1
+    durability: 500
+    fuel-capacity: 0
+    acceleration: 0.085
+    fuel-per-second: 0
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: OAK_PLANKS
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  snowmobile:
+    name: 스노우 모빌
+    type: LAND
+    top-speed-kmh: 110
+    reverse-speed-kmh: 40
+    boost-multiplier: 1.15
+    turn-rate-deg: 72
+    seats: 2
+    durability: 1200
+    fuel-capacity: 100
+    acceleration: 0.08
+    fuel-per-second: 0.022
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: WHITE_CONCRETE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  dacia:
+    name: 다시아
+    type: LAND
+    top-speed-kmh: 117
+    reverse-speed-kmh: 45
+    boost-multiplier: 1.15
+    turn-rate-deg: 48
+    seats: 4
+    durability: 1800
+    fuel-capacity: 100
+    acceleration: 0.06
+    fuel-per-second: 0.018
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: BLUE_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  mirado:
+    name: 미라도
+    type: LAND
+    top-speed-kmh: 152
+    reverse-speed-kmh: 55
+    boost-multiplier: 1.15
+    turn-rate-deg: 50
+    seats: 4
+    durability: 2000
+    fuel-capacity: 100
+    acceleration: 0.065
+    fuel-per-second: 0.023
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: RED_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  pony-coupe:
+    name: 포니 쿠페
+    type: LAND
+    top-speed-kmh: 140
+    reverse-speed-kmh: 50
+    boost-multiplier: 1.15
+    turn-rate-deg: 55
+    seats: 4
+    durability: 1800
+    fuel-capacity: 100
+    acceleration: 0.07
+    fuel-per-second: 0.02
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: CYAN_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  minibus:
+    name: 미니 버스
+    type: LAND
+    top-speed-kmh: 105
+    reverse-speed-kmh: 35
+    boost-multiplier: 1.15
+    turn-rate-deg: 35
+    seats: 6
+    durability: 4000
+    fuel-capacity: 100
+    acceleration: 0.035
+    fuel-per-second: 0.03
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: ORANGE_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 7
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  uaz:
+    name: UAZ
+    type: LAND
+    top-speed-kmh: 115
+    reverse-speed-kmh: 40
+    boost-multiplier: 1.15
+    turn-rate-deg: 42
+    seats: 4
+    durability: 2400
+    fuel-capacity: 100
+    acceleration: 0.05
+    fuel-per-second: 0.026
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: GREEN_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  buggy:
+    name: 버기
+    type: LAND
+    top-speed-kmh: 100
+    reverse-speed-kmh: 40
+    boost-multiplier: 1.15
+    turn-rate-deg: 70
+    seats: 2
+    durability: 1540
+    fuel-capacity: 100
+    acceleration: 0.075
+    fuel-per-second: 0.02
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: BROWN_CONCRETE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  brdm:
+    name: BRDM-2
+    type: AMPHIBIOUS
+    top-speed-kmh: 105
+    reverse-speed-kmh: 35
+    boost-multiplier: 1.15
+    turn-rate-deg: 30
+    seats: 4
+    durability: 4000
+    fuel-capacity: 100
+    acceleration: 0.032
+    fuel-per-second: 0.035
+    armored: true
+    locked-to-team: true
+    takeoff-speed-kmh: 0
+    model-material: GRAY_CONCRETE
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 7
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  motor-glider:
+    name: 모터글라이더
+    type: AIR
+    top-speed-kmh: 110
+    reverse-speed-kmh: 25
+    boost-multiplier: 1.15
+    turn-rate-deg: 45
+    seats: 2
+    durability: 1000
+    fuel-capacity: 100
+    acceleration: 0.04
+    fuel-per-second: 0.028
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 60
+    model-material: LIME_CONCRETE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  boat:
+    name: 보트
+    type: WATER
+    top-speed-kmh: 90
+    reverse-speed-kmh: 30
+    boost-multiplier: 1.15
+    turn-rate-deg: 45
+    seats: 6
+    durability: 1500
+    fuel-capacity: 100
+    acceleration: 0.055
+    fuel-per-second: 0.025
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: DARK_OAK_PLANKS
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  aquarail:
+    name: 아쿠아레일
+    type: WATER
+    top-speed-kmh: 125
+    reverse-speed-kmh: 35
+    boost-multiplier: 1.15
+    turn-rate-deg: 80
+    seats: 2
+    durability: 1000
+    fuel-capacity: 100
+    acceleration: 0.08
+    fuel-per-second: 0.022
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: PRISMARINE
+    model-scale:
+    - 1.2
+    - 0.7
+    - 2.0
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+  rubber-boat:
+    name: 고무보트
+    type: WATER
+    top-speed-kmh: 60
+    reverse-speed-kmh: 20
+    boost-multiplier: 1.15
+    turn-rate-deg: 50
+    seats: 4
+    durability: 1000
+    fuel-capacity: 100
+    acceleration: 0.045
+    fuel-per-second: 0.018
+    armored: false
+    locked-to-team: false
+    takeoff-speed-kmh: 0
+    model-material: BLACK_WOOL
+    model-scale:
+    - 1.6
+    - 1.0
+    - 2.8
+    spawn-item: MINECART
+    explosion-delay-seconds: 5
+    explosion-radius: 5
+    source-url: https://namu.wiki/w/PUBG:%20BATTLEGROUNDS/%EC%9D%B4%EB%8F%99%EC%88%98%EB%8B%A8
+    balance-source: pubg-community-vehicle-profile
+    source-checked-at: '2026-07-11'
+vehicle-system:
+  blocks-per-meter: 1.0
+  exit-safe-speed-kmh: 30
+  exit-lethal-speed-kmh: 65
+  roadkill-min-speed-kmh: 25
+  collision-damage-multiplier: 1.0
+  show-actionbar: true

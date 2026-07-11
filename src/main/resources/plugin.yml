@@ -8,7 +8,7 @@ commands:
   battlegrounds:
     aliases: [bg]
     description: Battlegrounds administration
-    usage: /bg <give|reload|status>
+    usage: /bg <give|find|vehicle|reload|status>
 permissions:
   battlegrounds.admin:
     default: op
